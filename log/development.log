@@ -15315,3 +15315,967 @@ FOREIGN KEY ("estabelecimento_id")
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE DATABASE "wip_development" ENCODING = 'unicode'[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE DATABASE "wip_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:24:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 7.1ms | GC: 5.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 94.1ms | GC: 48.8ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 49.9ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-dark navbar-expand-xl navbar-static" style="background: #005171;">
+  <div class="container-fluid">
+    <div class="d-flex d-xl-none me-2">
+      <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+        <i class="ph-list"></i>
+      </button>
+    </div>
+    <div class="navbar-brand flex-0 flex-sm-1 py-0">
+      <%= link_to home_index_path, class: 'd-flex align-items-center text-decoration-none text-white gap-2' do %>
+        <img src="/layout/assets/img/fast-food.png" style="height: 65px">
+        <img src="/layout/assets/.png" style="height: 55px">
+      <% end %>
+    </div>
+    <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+      <li class="nav-item nav-item-dropdown-lg ms-lg-2">
+        <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" id="userMenuToggle">
+          <div class="status-indicator-container">
+            <i class="ph-user-circle"></i>
+          </div>
+          <span class="d-none d-xl-inline-block mx-lg-2">
+            <%=<h1>Olá, Dhiogo </h1># current_user&.nome || 'Convidado' %>
+          </span>
+        </a>
+        <div id="userMenu" class="custom-dropdown-menu">
+          <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout" # method: :delete,  %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<style>
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    right: 0;
+    margin-top: 0px;
+    z-index: 1000;
+    padding: 4px;
+    width: 200px;
+  }
+
+  .btn-logout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #4a4a4a;
+    text-align: left;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-logout:hover {
+    color: #4a4a4a;
+    background-color: #f2f2f2;
+  }
+
+  .nav-item-dropdown-lg {
+    position: relative;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const userMenuToggle = document.getElementById('userMenuToggle');
+    const userMenu = document.getElementById('userMenu');
+
+    userMenuToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!userMenu.contains(e.target) && !userMenuToggle.contains(e.target)) {
+        userMenu.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+):
+
+Causes:
+ActiveSupport::SyntaxErrorProxy (/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:21: syntax error, unexpected '<'
+...reeze; @output_buffer.append=(<h1>Olá, Dhiogo </h1># curren...
+...                              ^
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:22: unknown regexp options - pa
+          </span>
+           ^~~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:27: unknown regexp option - l
+      </li>
+       ^~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:29: unknown regexp options - dv
+  </div>
+   ^~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:65: unknown regexp options - tyl
+</style>
+ ^~~~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:85: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+1:    <div class="navbar navbar-dark navbar-expand-xl navbar-static" style="background: #005171;">
+2:      <div class="container-fluid">
+3:        <div class="d-flex d-xl-none me-2">
+4:          <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+5:            <i class="ph-list"></i>
+6:          </button>
+7:        </div>
+8:        <div class="navbar-brand flex-0 flex-sm-1 py-0">
+9:          <%= link_to home_index_path, class: 'd-flex align-items-center text-decoration-none text-white gap-2' do %>
+10:            <img src="/layout/assets/img/fast-food.png" style="height: 65px">
+11:            <img src="/layout/assets/.png" style="height: 55px">
+12:          <% end %>
+13:        </div>
+14:        <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+15:          <li class="nav-item nav-item-dropdown-lg ms-lg-2">
+16:            <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" id="userMenuToggle">
+17:              <div class="status-indicator-container">
+18:                <i class="ph-user-circle"></i>
+19:              </div>
+20:              <span class="d-none d-xl-inline-block mx-lg-2">
+21:                <%=<h1>Olá, Dhiogo </h1># current_user&.nome || 'Convidado' %>
+22:              </span>
+23:            </a>
+24:            <div id="userMenu" class="custom-dropdown-menu">
+25:              <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout" # method: :delete,  %>
+26:            </div>
+27:          </li>
+28:        </ul>
+29:      </div>
+30:    </div>
+31:    <style>
+32:      .custom-dropdown-menu {
+33:        display: none;
+34:        position: absolute;
+35:        background-color: white;
+36:        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+37:        border-radius: 4px;
+38:        right: 0;
+39:        margin-top: 0px;
+40:        z-index: 1000;
+41:        padding: 4px;
+42:        width: 200px;
+43:      }
+44:    
+45:      .btn-logout {
+46:        display: block;
+47:        width: 100%;
+48:        padding: 10px;
+49:        color: #4a4a4a;
+50:        text-align: left;
+51:        font-size: 14px;
+52:        background-color: white;
+53:        border-radius: 4px;
+54:        transition: background-color 0.3s ease;
+55:      }
+56:    
+57:      .btn-logout:hover {
+58:        color: #4a4a4a;
+59:        background-color: #f2f2f2;
+60:      }
+61:    
+62:      .nav-item-dropdown-lg {
+63:        position: relative;
+64:      }
+65:    </style>
+66:    <script>
+67:      document.addEventListener('DOMContentLoaded', function () {
+68:        const userMenuToggle = document.getElementById('userMenuToggle');
+69:        const userMenu = document.getElementById('userMenu');
+70:    
+71:        userMenuToggle.addEventListener('click', function (e) {
+72:          e.preventDefault();
+73:          userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+74:        });
+75:    
+76:        document.addEventListener('click', function (e) {
+77:          if (!userMenu.contains(e.target) && !userMenuToggle.contains(e.target)) {
+78:            userMenu.style.display = 'none';
+79:          }
+80:        });
+81:      });
+82:    </script>
+  
+app/views/shared/_navbar.html.erb:21: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:22: unknown regexp options - pa
+app/views/shared/_navbar.html.erb:27: unknown regexp option - l
+app/views/shared/_navbar.html.erb:29: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:65: unknown regexp options - tyl
+app/views/shared/_navbar.html.erb:85: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:38
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:24:59 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 1.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.4ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-dark navbar-expand-xl navbar-static" style="background: #005171;">
+  <div class="container-fluid">
+    <div class="d-flex d-xl-none me-2">
+      <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+        <i class="ph-list"></i>
+      </button>
+    </div>
+    <div class="navbar-brand flex-0 flex-sm-1 py-0">
+      <%= link_to home_index_path, class: 'd-flex align-items-center text-decoration-none text-white gap-2' do %>
+        <img src="/layout/assets/img/fast-food.png" style="height: 65px">
+        <img src="/layout/assets/.png" style="height: 55px">
+      <% end %>
+    </div>
+    <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+      <li class="nav-item nav-item-dropdown-lg ms-lg-2">
+        <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" id="userMenuToggle">
+          <div class="status-indicator-container">
+            <i class="ph-user-circle"></i>
+          </div>
+          <span class="d-none d-xl-inline-block mx-lg-2">
+            <h1>Olá, Dhiogo </h1>
+          </span>
+        </a>
+        <div id="userMenu" class="custom-dropdown-menu">
+          <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout" # method: :delete,  %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<style>
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    right: 0;
+    margin-top: 0px;
+    z-index: 1000;
+    padding: 4px;
+    width: 200px;
+  }
+
+  .btn-logout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #4a4a4a;
+    text-align: left;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-logout:hover {
+    color: #4a4a4a;
+    background-color: #f2f2f2;
+  }
+
+  .nav-item-dropdown-lg {
+    position: relative;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const userMenuToggle = document.getElementById('userMenuToggle');
+    const userMenu = document.getElementById('userMenu');
+
+    userMenuToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!userMenu.contains(e.target) && !userMenuToggle.contains(e.target)) {
+        userMenu.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+):
+
+Causes:
+ActiveSupport::SyntaxErrorProxy (/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:26: syntax error, unexpected '<'
+        </div>
+        ^
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:27: unknown regexp option - l
+      </li>
+       ^~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:29: unknown regexp options - dv
+  </div>
+   ^~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:65: unknown regexp options - tyl
+</style>
+ ^~~~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:85: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+1:    <div class="navbar navbar-dark navbar-expand-xl navbar-static" style="background: #005171;">
+2:      <div class="container-fluid">
+3:        <div class="d-flex d-xl-none me-2">
+4:          <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+5:            <i class="ph-list"></i>
+6:          </button>
+7:        </div>
+8:        <div class="navbar-brand flex-0 flex-sm-1 py-0">
+9:          <%= link_to home_index_path, class: 'd-flex align-items-center text-decoration-none text-white gap-2' do %>
+10:            <img src="/layout/assets/img/fast-food.png" style="height: 65px">
+11:            <img src="/layout/assets/.png" style="height: 55px">
+12:          <% end %>
+13:        </div>
+14:        <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+15:          <li class="nav-item nav-item-dropdown-lg ms-lg-2">
+16:            <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" id="userMenuToggle">
+17:              <div class="status-indicator-container">
+18:                <i class="ph-user-circle"></i>
+19:              </div>
+20:              <span class="d-none d-xl-inline-block mx-lg-2">
+21:                <h1>Olá, Dhiogo </h1>
+22:              </span>
+23:            </a>
+24:            <div id="userMenu" class="custom-dropdown-menu">
+25:              <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout" # method: :delete,  %>
+26:            </div>
+27:          </li>
+28:        </ul>
+29:      </div>
+30:    </div>
+31:    <style>
+32:      .custom-dropdown-menu {
+33:        display: none;
+34:        position: absolute;
+35:        background-color: white;
+36:        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+37:        border-radius: 4px;
+38:        right: 0;
+39:        margin-top: 0px;
+40:        z-index: 1000;
+41:        padding: 4px;
+42:        width: 200px;
+43:      }
+44:    
+45:      .btn-logout {
+46:        display: block;
+47:        width: 100%;
+48:        padding: 10px;
+49:        color: #4a4a4a;
+50:        text-align: left;
+51:        font-size: 14px;
+52:        background-color: white;
+53:        border-radius: 4px;
+54:        transition: background-color 0.3s ease;
+55:      }
+56:    
+57:      .btn-logout:hover {
+58:        color: #4a4a4a;
+59:        background-color: #f2f2f2;
+60:      }
+61:    
+62:      .nav-item-dropdown-lg {
+63:        position: relative;
+64:      }
+65:    </style>
+66:    <script>
+67:      document.addEventListener('DOMContentLoaded', function () {
+68:        const userMenuToggle = document.getElementById('userMenuToggle');
+69:        const userMenu = document.getElementById('userMenu');
+70:    
+71:        userMenuToggle.addEventListener('click', function (e) {
+72:          e.preventDefault();
+73:          userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+74:        });
+75:    
+76:        document.addEventListener('click', function (e) {
+77:          if (!userMenu.contains(e.target) && !userMenuToggle.contains(e.target)) {
+78:            userMenu.style.display = 'none';
+79:          }
+80:        });
+81:      });
+82:    </script>
+  
+app/views/shared/_navbar.html.erb:26: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:27: unknown regexp option - l
+app/views/shared/_navbar.html.erb:29: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:65: unknown regexp options - tyl
+app/views/shared/_navbar.html.erb:85: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:38
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:25:13 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="navbar navbar-dark navbar-expand-xl navbar-static" style="background: #005171;">
+  <div class="container-fluid">
+    <div class="d-flex d-xl-none me-2">
+      <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+        <i class="ph-list"></i>
+      </button>
+    </div>
+    <div class="navbar-brand flex-0 flex-sm-1 py-0">
+      <%= link_to root_path, class: 'd-flex align-items-center text-decoration-none text-white gap-2' do %>
+        <img src="/layout/assets/img/fast-food.png" style="height: 65px">
+        <img src="/layout/assets/.png" style="height: 55px">
+      <% end %>
+    </div>
+    <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+      <li class="nav-item nav-item-dropdown-lg ms-lg-2">
+        <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" id="userMenuToggle">
+          <div class="status-indicator-container">
+            <i class="ph-user-circle"></i>
+          </div>
+          <span class="d-none d-xl-inline-block mx-lg-2">
+            <h1>Olá, Dhiogo </h1>
+          </span>
+        </a>
+        <div id="userMenu" class="custom-dropdown-menu">
+          <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout" # method: :delete,  %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<style>
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    right: 0;
+    margin-top: 0px;
+    z-index: 1000;
+    padding: 4px;
+    width: 200px;
+  }
+
+  .btn-logout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #4a4a4a;
+    text-align: left;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-logout:hover {
+    color: #4a4a4a;
+    background-color: #f2f2f2;
+  }
+
+  .nav-item-dropdown-lg {
+    position: relative;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const userMenuToggle = document.getElementById('userMenuToggle');
+    const userMenu = document.getElementById('userMenu');
+
+    userMenuToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!userMenu.contains(e.target) && !userMenuToggle.contains(e.target)) {
+        userMenu.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+):
+
+Causes:
+ActiveSupport::SyntaxErrorProxy (/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:26: syntax error, unexpected '<'
+        </div>
+        ^
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:27: unknown regexp option - l
+      </li>
+       ^~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:29: unknown regexp options - dv
+  </div>
+   ^~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:65: unknown regexp options - tyl
+</style>
+ ^~~~~~
+/home/dhiogo/projetos/github/WIP/app/views/shared/_navbar.html.erb:85: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+1:    <div class="navbar navbar-dark navbar-expand-xl navbar-static" style="background: #005171;">
+2:      <div class="container-fluid">
+3:        <div class="d-flex d-xl-none me-2">
+4:          <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+5:            <i class="ph-list"></i>
+6:          </button>
+7:        </div>
+8:        <div class="navbar-brand flex-0 flex-sm-1 py-0">
+9:          <%= link_to root_path, class: 'd-flex align-items-center text-decoration-none text-white gap-2' do %>
+10:            <img src="/layout/assets/img/fast-food.png" style="height: 65px">
+11:            <img src="/layout/assets/.png" style="height: 55px">
+12:          <% end %>
+13:        </div>
+14:        <ul class="nav flex-row justify-content-end order-1 order-lg-2">
+15:          <li class="nav-item nav-item-dropdown-lg ms-lg-2">
+16:            <a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" id="userMenuToggle">
+17:              <div class="status-indicator-container">
+18:                <i class="ph-user-circle"></i>
+19:              </div>
+20:              <span class="d-none d-xl-inline-block mx-lg-2">
+21:                <h1>Olá, Dhiogo </h1>
+22:              </span>
+23:            </a>
+24:            <div id="userMenu" class="custom-dropdown-menu">
+25:              <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout" # method: :delete,  %>
+26:            </div>
+27:          </li>
+28:        </ul>
+29:      </div>
+30:    </div>
+31:    <style>
+32:      .custom-dropdown-menu {
+33:        display: none;
+34:        position: absolute;
+35:        background-color: white;
+36:        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+37:        border-radius: 4px;
+38:        right: 0;
+39:        margin-top: 0px;
+40:        z-index: 1000;
+41:        padding: 4px;
+42:        width: 200px;
+43:      }
+44:    
+45:      .btn-logout {
+46:        display: block;
+47:        width: 100%;
+48:        padding: 10px;
+49:        color: #4a4a4a;
+50:        text-align: left;
+51:        font-size: 14px;
+52:        background-color: white;
+53:        border-radius: 4px;
+54:        transition: background-color 0.3s ease;
+55:      }
+56:    
+57:      .btn-logout:hover {
+58:        color: #4a4a4a;
+59:        background-color: #f2f2f2;
+60:      }
+61:    
+62:      .nav-item-dropdown-lg {
+63:        position: relative;
+64:      }
+65:    </style>
+66:    <script>
+67:      document.addEventListener('DOMContentLoaded', function () {
+68:        const userMenuToggle = document.getElementById('userMenuToggle');
+69:        const userMenu = document.getElementById('userMenu');
+70:    
+71:        userMenuToggle.addEventListener('click', function (e) {
+72:          e.preventDefault();
+73:          userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+74:        });
+75:    
+76:        document.addEventListener('click', function (e) {
+77:          if (!userMenu.contains(e.target) && !userMenuToggle.contains(e.target)) {
+78:            userMenu.style.display = 'none';
+79:          }
+80:        });
+81:      });
+82:    </script>
+  
+app/views/shared/_navbar.html.erb:26: syntax error, unexpected '<'
+app/views/shared/_navbar.html.erb:27: unknown regexp option - l
+app/views/shared/_navbar.html.erb:29: unknown regexp options - dv
+app/views/shared/_navbar.html.erb:65: unknown regexp options - tyl
+app/views/shared/_navbar.html.erb:85: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:38
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:25:32 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_user_session_path' for an instance of #<Class:0x00007f30622ff3c0>):
+
+Causes:
+NameError (undefined local variable or method `destroy_user_session_path' for an instance of #<Class:0x00007f30622ff3c0>)
+    22:           </span>
+    23:         </a>
+    24:         <div id="userMenu" class="custom-dropdown-menu">
+    25:           <%= button_to '<i class="ph-sign-out me-2"></i>Sair'.html_safe, destroy_user_session_path, class: "btn btn-logout"   %>
+    26:         </div>
+    27:       </li>
+    28:     </ul>
+  
+app/views/shared/_navbar.html.erb:25
+app/views/layouts/application.html.erb:38
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:25:47 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/layout/assets/.png" for 127.0.0.1 at 2025-02-01 15:25:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:26:02 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.6ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/layout/assets/.png" for 127.0.0.1 at 2025-02-01 15:26:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/.png"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for 127.0.0.1 at 2025-02-01 15:26:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:26:18 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/.png" for 127.0.0.1 at 2025-02-01 15:26:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:26:20 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/.png" for 127.0.0.1 at 2025-02-01 15:26:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:26:21 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/.png" for 127.0.0.1 at 2025-02-01 15:26:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:32 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:33 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:33 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:33 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.1ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:34 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:42 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-01 15:28:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:28:44 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/layout/assets/MenuxLogo.png" for 127.0.0.1 at 2025-02-01 15:28:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/MenuxLogo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:29:15 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:29:33 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:30:16 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:32:23 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.2ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:32:38 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:32:56 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | GC: 0.7ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 1.4ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:32:57 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:32:57 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.5ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:33:08 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.1ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:33:21 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:33:47 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 2.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-01 15:33:52 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 1.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1905533104501526955)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-01 19:34:06.159797', '2025-02-01 19:34:06.159799') RETURNING "key"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1905533104501526955)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
