@@ -38,9 +38,6 @@ group :development, :test do
 
   # Análise estática para vulnerabilidades de segurança [https://brakemanscanner.org/]
   gem 'brakeman', require: false
-
-  # Estilo Ruby Omakase [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'rubocop-rails-omakase', require: false
 end
 
 group :development do
