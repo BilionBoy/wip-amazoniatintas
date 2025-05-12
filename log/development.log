@@ -18353,3 +18353,73 @@ puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
   [1m[35m (150.9ms)[0m  [1m[35mCREATE DATABASE "amazonia_tintas_development" ENCODING = 'unicode'[0m
   [1m[35m (143.5ms)[0m  [1m[35mCREATE DATABASE "amazonia_tintas_development" ENCODING = 'unicode'[0m
   [1m[35m (66.7ms)[0m  [1m[35mCREATE DATABASE "amazonia_tintas_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2025-05-12 09:27:29 -0400
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | GC: 0.0ms)
+Completed 200 OK in 73ms (Views: 63.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-12 09:27:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-05-12 09:30:22 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | GC: 8.3ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 9.7ms)
+
+
+Started GET "/" for ::1 at 2025-05-12 09:37:05 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | GC: 0.3ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2025-05-12 09:37:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2025-05-12 09:37:11 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-05-12 09:37:16 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | GC: 9.8ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 9.8ms)
+
+
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for ::1 at 2025-05-12 09:37:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
