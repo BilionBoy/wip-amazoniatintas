@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: AmazoniaTintas
+  username: amazoniatintas
   password: Amazonia11235813
   host: localhost
   port: 5432
@@ -19,7 +19,7 @@ test:
 production:
   <<: *default
   database: amazonia_tintas_production
-  username: <%= ENV["AMAZONIA_DB_USERNAME"] || "AmazoniaTintas" %>
+  username: <%= ENV["AMAZONIA_DB_USERNAME"] || "amazoniatintas" %>
   password: <%= ENV["AMAZONIA_DB_PASSWORD"] || "Amazonia11235813" %>
   host: <%= ENV["AMAZONIA_DB_HOST"] || "localhost" %>
   port: <%= ENV["AMAZONIA_DB_PORT"] || 5432 %>
