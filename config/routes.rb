@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :l_tipo_usuarios
   root 'home#index'
 
   
