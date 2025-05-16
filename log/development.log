@@ -18582,3 +18582,133 @@ Migrating to CreateLTipoUsuarios (20250514163831)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2025-05-14 13:16:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 185.5ms | GC: 33.0ms)
+Completed 200 OK in 233ms (Views: 191.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 42.6ms)
+
+
+Started POST "/?class=btn+btn-logout" for ::1 at 2025-05-14 13:16:53 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/store/index" for ::1 at 2025-05-14 13:17:08 -0400
+Processing by StoreController#index as HTML
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/images/logo.png" for ::1 at 2025-05-14 13:17:08 -0400
+Started GET "/store/paint.png" for ::1 at 2025-05-14 13:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/images/logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/script.js" for ::1 at 2025-05-14 13:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-14 13:17:09 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-14 13:17:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to DeviseCreateUsers (20250515160011)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "name" character varying, "l_tipo_usuario_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_users_on_l_tipo_usuario_id" ON "users" ("l_tipo_usuario_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250515160011') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2025-05-15 12:45:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-05-15 12:45:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/devise_application
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/devise_application (Duration: 16.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 64.1ms | GC: 0.0ms)
+Completed 200 OK in 96ms (Views: 69.3ms | ActiveRecord: 9.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2025-05-15 12:45:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/password/new" for ::1 at 2025-05-15 12:45:38 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/shared/_error_messages.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2025-05-15 12:45:52 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 16ms (ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/devise_application
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/devise_application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 208ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2025-05-15 12:45:55 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/devise_application
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/kaik/.rvm/gems/ruby-3.3.5/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/devise_application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 211ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 10.3ms)
+
+
