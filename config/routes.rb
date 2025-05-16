@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations'
+  sessions: 'users/sessions',
+  registrations: 'users/registrations'
   }
-
   resources :l_tipo_usuarios
   root 'home#index'
 
