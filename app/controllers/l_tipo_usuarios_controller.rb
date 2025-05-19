@@ -17,6 +17,7 @@ class LTipoUsuariosController < ApplicationController
   def create
     @l_tipo_usuario = LTipoUsuario.new(l_tipo_usuario_params)
 
+
     if @l_tipo_usuario.save
       redirect_to l_tipo_usuarios_path, notice: t('messages.created_successfully')
     else
@@ -53,4 +54,10 @@ class LTipoUsuariosController < ApplicationController
   def handle_not_found
     redirect_to l_tipo_usuarios_path, alert: t('messages.not_found')
   end
+
+
+  def l_tipo_usuario_params
+    params.require(:l_tipo_usuario).permit(:descricao)
+  end
+
 end
