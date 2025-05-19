@@ -20062,3 +20062,50 @@ Processing by Users::RegistrationsController#new as HTML
 Completed 200 OK in 64ms (Views: 39.6ms | ActiveRecord: 5.3ms (0 queries, 0 cached) | GC: 0.7ms)
 
 
+Started GET "/users/sign_in" for ::1 at 2025-05-16 11:28:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 10.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 34.1ms | GC: 0.0ms)
+Completed 200 OK in 65ms (Views: 39.3ms | ActiveRecord: 6.5ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-05-16 11:28:20 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 28.9ms | GC: 24.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 30.8ms | GC: 24.8ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 24.8ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2025-05-16 11:28:21 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 7.2ms | GC: 0.7ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 8.3ms | GC: 0.7ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-05-16 11:28:21 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 7.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 10.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
