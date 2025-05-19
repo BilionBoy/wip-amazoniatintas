@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-header d-flex">
     <%= search_form_for @q, html: { class: "d-flex gap-2" , autocomplete: "off"} do |f| %>
-      <%= f.search_field :description_cont, class: "form-control", placeholder: "Pesquisar" %>
+      <%= f.search_field :descricao_cont, class: "form-control", placeholder: "Pesquisar" %>
       <%= f.button(type: 'submit', class: 'btn btn-info') { tag.i(class: 'ph-magnifying-glass') } %>
       <%= link_to  tag.i(class: 'ph-x-circle'), l_tipo_usuarios_path, class: "btn btn-light" if params[:q] %>
       <% end %>
@@ -15,10 +15,7 @@
           <thead>
             <tr>
               <th class="text-center">Ações</th>
-              
-                
                   <th><%= sort_link(@q, :description, t("activerecord.attributes.l_tipo_usuario.description")) %></th>
-                
             </tr>
           </thead>
           <tbody>

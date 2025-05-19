@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_05_15_160011) do
+ActiveRecord::Schema[7.2].define(version: 2025_05_19_162356) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "l_tipo_usuarios", force: :cascade do |t|
-    t.string "description", null: false
+    t.string "descricao", null: false
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,12 +27,14 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_15_160011) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name"
-    t.bigint "l_tipo_usuario_id"
+    t.string "name", null: false
+    t.bigint "l_tipo_usuario_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["l_tipo_usuario_id"], name: "index_users_on_l_tipo_usuario_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_foreign_key "users", "l_tipo_usuarios"
 end
