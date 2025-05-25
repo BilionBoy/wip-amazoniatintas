@@ -23081,3 +23081,158 @@ Started GET "/store/images/logo.png" for 127.0.0.1 at 2025-05-25 18:17:11 -0400
   
 ActionController::RoutingError (No route matches [GET] "/store/images/logo.png"):
   
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:08 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.5ms | GC: 0.3ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 2.2ms | GC: 0.3ms)
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:39 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.4ms | GC: 4.6ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 4.6ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/paint.png" for 127.0.0.1 at 2025-05-25 18:20:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/paint.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:21:20 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "layout/assets/img/paint.png" is not present in the asset pipeline.
+):
+
+Causes:
+Sprockets::Rails::Helper::AssetNotFound (The asset "layout/assets/img/paint.png" is not present in the asset pipeline.
+)
+    3:   <nav class="navbar navbar-expand-lg">
+    4:     <div class="container">
+    5:       <a class="navbar-brand" href="<%= root_path %>">
+    6:         <%= image_tag 'layout/assets/img/paint.png', alt: 'Amazônia Tintas', class: 'logo-img' %>
+    7:         Amazônia Tintas
+    8:       </a>
+    9:       <button
+  
+app/views/shared/store/_navbar.html.erb:6
+app/views/layouts/home_application.erb:18
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:21:38 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-25 18:22:02 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
