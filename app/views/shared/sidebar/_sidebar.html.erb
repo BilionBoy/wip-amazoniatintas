@@ -13,6 +13,7 @@
         </div>
       </div>
     </div>
+
     <!-- Barra de pesquisa -->
     <div class="sidebar-section-body">
       <div class="form-control-feedback form-control-feedback-end">
@@ -28,19 +29,28 @@
         </div>
       </div>
     </div>
+
     <!-- Itens da sidebar -->
     <div class="sidebar-section">
       <ul class="nav nav-sidebar" data-nav-type="accordion" id="sidebar-items">
-        <li class="nav-item"></li>
-          <a href="<%= root_path %>" class="nav-link" id="config-link" data-no-close>
+        <li class="nav-item">
+          <a href="<%= root_path %>" class="nav-link" id="home-link" data-no-close>
             <i class="ph-house"></i>
             <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="<%= l_tipo_usuarios_path %>" class="nav-link" id="l-tipo-usuarios-link" data-no-close>
+            <i class="ph-users-three"></i>
+            <span>Tipos de Usuário</span>
           </a>
         </li>
       </ul>
     </div>
   </div>
 </div>
+
 
   <script>
     function filterSidebar() {
