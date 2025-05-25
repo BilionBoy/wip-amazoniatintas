@@ -11,42 +11,9 @@ pt-BR:
 
   activerecord:
     models:
-      funcao:
-        one: "Função"
-        other: "Funções"
-      estabelecimento:
-        one: "Estabelecimento"
-        other: "Estabelecimentos"
-      user_estabelecimento:
-        one: "Usuário Estabelecimento"
-        other: "Usuários Estabelecimentos"
-      categoria:
-        one: "Categoria"
-        other: "Categorias"
-      produto:
-        one: "Produto"
-        other: "Produtos"
-    attributes:
-      funcao:
-        nome: "Nome"
-        descricao: "Descrição"
-      estabelecimento:
-        nome: "Nome"
-        cnpj: "CNPJ"
-        endereco: "Endereço"
-        telefone: "Telefone"
-      user_estabelecimento:
-        nome: "Usuário"
-        estabelecimento: "Estabelecimento"
-      categoria:
-        nome: "Nome"
-        descricao: "Descrição"
-      produto:
-        nome: "Nome"
-        descricao: "Descrição"
-        preco: "Preço"
-        categoria: "Categoria"
-        quantidade_estoque: "Quantidade em Estoque"
+      l_tipo_usuario:
+        one: "Tipo de Usuário"
+        other: "Tipos de Usuários"
     errors:
       messages:
         record_invalid: "A validação falhou: %{errors}"
@@ -58,8 +25,7 @@ pt-BR:
           one: "Funcao"
           other: "Funcões"
       attributes:
-        funcoes:
-          nome: "Nome"
+        l_tipo_usuario:
           descricao: "Descrição"
   date:
     abbr_day_names:
