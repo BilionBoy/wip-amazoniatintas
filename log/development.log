@@ -21073,3 +21073,396 @@ Processing by Users::RegistrationsController#new as HTML
 Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
 
 
+Started GET "/users/password/new" for 127.0.0.1 at 2025-05-25 17:46:13 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_error_messages.html.erb (Duration: 0.6ms | GC: 0.3ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application (Duration: 4.4ms | GC: 0.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 8.1ms | GC: 1.9ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:46:46 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/shared/_links.html.erb (Duration: 0.8ms | GC: 0.3ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 3.0ms | GC: 0.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 12.0ms | GC: 1.2ms)
+Completed 200 OK in 25ms (Views: 13.7ms | ActiveRecord: 2.3ms (0 queries, 0 cached) | GC: 6.8ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2025-05-25 17:46:46 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_error_messages.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 3.6ms | GC: 0.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-25 17:46:47 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 3.1ms | GC: 0.2ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 3.3ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x000078791cb2b048>::GTipoUsuario):
+
+Causes:
+NameError (uninitialized constant #<Class:0x000078791cb2b048>::GTipoUsuario)
+    21:             <!-- Confirmação de Senha -->
+    22:             <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "password-field form-control" } %>
+    23:             <!-- Tipo de Usuário -->
+    24:             <%= f.input :g_tipo_usuario_id, collection: GTipoUsuario.all.map { |t| [t.nome, t.id] }, prompt: "Selecione um tipo", input_html: { class: "form-control" } %>
+    25:           </div>
+    26:           <!-- Botão de cadastro -->
+    27:           <div class="card-footer">
+  
+app/views/users/registrations/new.html.erb:24
+app/views/users/registrations/new.html.erb:7
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:46:55 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:13 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 1.5ms | GC: 0.5ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1.6ms | GC: 0.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.7ms (0 queries, 0 cached) | GC: 2.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:38 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 1.0ms | GC: 0.1ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1.2ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.8ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:40 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:41 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:41 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 1.0ms | GC: 0.1ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1.5ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:50 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:47:51 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+):
+
+Causes:
+ActionView::MissingTemplate (Missing partial shared/_notice with {:locale=>[:"pt-BR", :pt], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :axlsx]}.
+
+Searched in:
+  * "/home/dhiogo/projetos/github/wip-amazoniatintas/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.13/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actiontext-7.2.2.1/app/views"
+  * "/home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/actionmailbox-7.2.2.1/app/views"
+)
+     8:       <div class="card border-0 shadow shadow-sm">
+     9:         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    10:           <div class="card-body">
+    11:             <%= render "shared/notice" %>
+    12:             <!-- Input para o e-mail -->
+    13:             <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+    14:             <!-- Input para a senha -->
+  
+app/views/users/sessions/new.html.erb:11
+app/views/users/sessions/new.html.erb:9
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-25 17:48:20 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 14.8ms | GC: 3.7ms)
+Completed 200 OK in 21ms (Views: 15.9ms | ActiveRecord: 1.8ms (0 queries, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-25 17:48:23 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 3.1ms | GC: 0.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 3.3ms | GC: 0.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x0000787916b350a8>::GTipoUsuario):
+
+Causes:
+NameError (uninitialized constant #<Class:0x0000787916b350a8>::GTipoUsuario)
+    21:             <!-- Confirmação de Senha -->
+    22:             <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "password-field form-control" } %>
+    23:             <!-- Tipo de Usuário -->
+    24:             <%= f.input :g_tipo_usuario_id, collection: GTipoUsuario.all.map { |t| [t.nome, t.id] }, prompt: "Selecione um tipo", input_html: { class: "form-control" } %>
+    25:           </div>
+    26:           <!-- Botão de cadastro -->
+    27:           <div class="card-footer">
+  
+app/views/users/registrations/new.html.erb:24
+app/views/users/registrations/new.html.erb:7
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-25 17:48:51 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  [1m[36mLTipoUsuario Load (0.5ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios"[0m
+  ↳ app/views/users/registrations/new.html.erb:24:in `map'
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 8.2ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 22.0ms | GC: 5.6ms)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 5.6ms)
+
+

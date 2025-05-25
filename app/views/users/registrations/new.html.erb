@@ -1,25 +1,55 @@
-<h2>Sign up - teste visível</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<div class="login-image">
+  <div class="row justify-content-center mb-3 " style="padding-top: 70px;">
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="row justify-content-center mt-5" style="padding-top: 10px; padding-bottom: 50px;">
+    <div class="col-xl-3 col-lg-5 col-md-6 col-sm-8">
+      <div class="card border-0 shadow shadow-sm">
+        <%= simple_form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
+          <div class="card-body">
+            <%= f.error_notification %>
+            <!-- Nome -->
+            <%= f.input :nome, autofocus: true, autocomplete: "nome", class: "form-control" %>
+            <!-- Email -->
+            <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email", class: "form-control" } %>
+            <!-- Senha -->
+            <div class="form-control-feedback form-control-feedback-start">
+              <%= f.input :password, required: true, hint: "#{@minimum_password_length} characters minimum", input_html: { autocomplete: "new-password", class: "password-field form-control" } %>
+              <div class="form-control-feedback-icon">
+                <i class="toggle-password ph-eye mt-4" toggle=".password-field"></i>
+              </div>
+            </div>
+            <!-- Confirmação de Senha -->
+            <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "password-field form-control" } %>
+            <!-- Tipo de Usuário -->
+            <%= f.input :l_tipo_usuario_id, collection: LTipoUsuario.all.map { |t| [t.nome, t.id] }, prompt: "Selecione um tipo", input_html: { class: "form-control" } %>
+          </div>
+          <!-- Botão de cadastro -->
+          <div class="card-footer">
+            <%= f.button :submit, "Sign up", class: "btn btn-primary w-100 hand-pointer" %>
+          </div>
+        <% end %>
+        <!-- Links para login e recuperação de senha -->
+        <div class="text-center">
+          <%= render "devise/shared/links" %>
+          <br>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+  <div class="row">
+    <div class="col text-center">
+    </div>
+  </div>
+</div>
+<script>
+  // Script para mostrar/esconder a senha
+  $('.toggle-password').click(function() {
+    $(this).toggleClass('ph-eye ph-eye-slash');
+    var input = $($(this).attr('toggle'));
+    if (input.attr('type') == 'password') {
+      input.attr('type', 'text');
+    } else {
+      input.attr('type', 'password');
+    }
+  });
+</script>
