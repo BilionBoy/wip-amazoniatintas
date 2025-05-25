@@ -2,24 +2,27 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: amazoniatintas
-  password: Amazonia11235813
-  host: localhost
-  port: 5432
-  timeout: 5000
 
 development:
   <<: *default
   database: amazonia_tintas_development
+  username: <%= ENV['DB_USERNAME'] || "amazoniatintas" %>
+  password: <%= ENV['DB_PASSWORD'] || "Amazonia11235813" %>
+  host: <%= ENV['DB_HOST'] || "localhost" %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
 
 test:
   <<: *default
   database: amazonia_tintas_test
+  username: <%= ENV['DB_USERNAME'] || "amazoniatintas" %>
+  password: <%= ENV['DB_PASSWORD'] || "Amazonia11235813" %>
+  host: <%= ENV['DB_HOST'] || "localhost" %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
 
 production:
   <<: *default
-  database: amazonia_tintas_production
-  username: <%= ENV["AMAZONIA_DB_USERNAME"] || "amazoniatintas" %>
-  password: <%= ENV["AMAZONIA_DB_PASSWORD"] || "Amazonia11235813" %>
-  host: <%= ENV["AMAZONIA_DB_HOST"] || "localhost" %>
-  port: <%= ENV["AMAZONIA_DB_PORT"] || 5432 %>
+  database: <%= ENV['DB_NAME'] || "amazonia_tintas_production" %>
+  username: <%= ENV['DB_USERNAME'] || "amazoniatintas" %>
+  password: <%= ENV['DB_PASSWORD'] || "Amazonia11235813" %>
+  host: <%= ENV['DB_HOST'] || "db" %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
