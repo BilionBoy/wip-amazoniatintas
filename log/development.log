@@ -23826,3 +23826,162 @@ ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"
   
 ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
   
+Started GET "/store/index" for ::1 at 2025-05-26 03:56:04 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_produtos.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 7.2ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 9.0ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/script.js" for ::1 at 2025-05-26 03:56:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 03:56:04 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 03:56:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for ::1 at 2025-05-26 03:57:53 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_produtos.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.9ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/script.js" for ::1 at 2025-05-26 03:57:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 03:57:53 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 03:57:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for ::1 at 2025-05-26 03:58:16 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_produtos.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 4.3ms | GC: 0.1ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.2ms | GC: 0.2ms)
+Completed 200 OK in 15ms (Views: 6.8ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/store/script.js" for ::1 at 2025-05-26 03:58:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 03:58:16 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 03:58:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for ::1 at 2025-05-26 03:59:13 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_produtos.html.erb (Duration: 1.7ms | GC: 0.3ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 1.4ms | GC: 0.5ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 5.9ms | GC: 0.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 7.7ms | GC: 0.7ms)
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/store/script.js" for ::1 at 2025-05-26 03:59:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 03:59:13 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 03:59:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for ::1 at 2025-05-26 03:59:33 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_produtos.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/script.js" for ::1 at 2025-05-26 03:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 03:59:33 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 03:59:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for ::1 at 2025-05-26 04:00:11 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.5ms | GC: 0.1ms)
+  Rendered shared/store/_produtos.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.4ms | GC: 0.1ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 4.9ms | GC: 0.2ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 8.7ms | GC: 1.4ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/store/script.js" for ::1 at 2025-05-26 04:00:12 -0400
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 04:00:12 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 04:00:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  

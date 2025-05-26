@@ -1,0 +1,168 @@
+<!-- Simulador de Cores -->
+<section id="simulador" class="simulator-section">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-subtitle">Experimente Antes</span>
+      <h2 class="section-title">Simulador de Cores</h2>
+      <p class="section-description">
+        Visualize como as cores ficarão em diferentes ambientes antes de
+        comprar
+      </p>
+    </div>
+    <div class="simulator-container" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="simulator-preview">
+            <div class="room-preview">
+              <%= image_tag "https://s3.sa-east-1.amazonaws.com/static.eucatex.aatb.com.br/Uploads/Site_New/assets/images/ondeencontrar.webp", alt: "Ambiente para simulação", class: "room-image" %>
+              <div class="wall-overlay" id="wall-preview"></div>
+            </div>
+            <div class="simulator-controls">
+              <button
+                class="btn btn-sm btn-outline-primary room-btn active"
+                data-room="living"
+              >
+                Sala
+              </button>
+              <button
+                class="btn btn-sm btn-outline-primary room-btn"
+                data-room="bedroom"
+              >
+                Quarto
+              </button>
+              <button
+                class="btn btn-sm btn-outline-primary room-btn"
+                data-room="kitchen"
+              >
+                Cozinha
+              </button>
+              <button
+                class="btn btn-sm btn-outline-primary room-btn"
+                data-room="bathroom"
+              >
+                Banheiro
+              </button>
+              <button
+                class="btn btn-sm btn-outline-primary room-btn"
+                data-room="office"
+              >
+                Escritório
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="color-picker-container">
+            <h3>Escolha uma cor</h3>
+            <div class="color-palette">
+              <div class="color-category">
+                <h4>Cores Neutras</h4>
+                <div class="color-swatches">
+                  <div
+                    class="color-swatch"
+                    style="background-color: #f5f5f5"
+                    data-color="#F5F5F5"
+                    data-name="Branco Neve"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #e0e0e0"
+                    data-color="#E0E0E0"
+                    data-name="Cinza Claro"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #d2b48c"
+                    data-color="#F5F5DC"
+                    data-name="Bege Clássico"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #d2b48c"
+                    data-color="#D2B48C"
+                    data-name="Areia"
+                  ></div>
+                </div>
+              </div>
+              <div class="color-category">
+                <h4>Cores Vibrantes</h4>
+                <div class="color-swatches">
+                  <div
+                    class="color-swatch"
+                    style="background-color: #4caf50"
+                    data-color="#4CAF50"
+                    data-name="Verde Amazônia"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #2196f3"
+                    data-color="#2196F3"
+                    data-name="Azul Céu"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #ffc107"
+                    data-color="#FFC107"
+                    data-name="Amarelo Solar"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #ff5722"
+                    data-color="#FF5722"
+                    data-name="Laranja Tropical"
+                  ></div>
+                </div>
+              </div>
+              <div class="color-category">
+                <h4>Cores Suaves</h4>
+                <div class="color-swatches">
+                  <div
+                    class="color-swatch"
+                    style="background-color: #e1f5fe"
+                    data-color="#E1F5FE"
+                    data-name="Azul Suave"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #f1f8e9"
+                    data-color="#F1F8E9"
+                    data-name="Verde Suave"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #fff8e1"
+                    data-color="#FFF8E1"
+                    data-name="Amarelo Suave"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: #fce4ec"
+                    data-color="#FCE4EC"
+                    data-name="Rosa Suave"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="selected-color-info">
+              <div class="selected-color-preview">
+                <div
+                  class="color-preview"
+                  id="selected-color-preview"
+                ></div>
+              </div>
+              <div class="selected-color-details">
+                <h4 id="selected-color-name">Selecione uma cor</h4>
+                <p id="selected-color-code">#FFFFFF</p>
+              </div>
+            </div>
+            <div class="simulator-actions">
+              <button class="btn btn-primary w-100 btn-quote">
+                Solicitar Orçamento
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

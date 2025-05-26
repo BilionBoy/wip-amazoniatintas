@@ -1,0 +1,252 @@
+<!-- Profissionais Section -->
+<section id="profissionais" class="professionals-section">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-subtitle">Nossa Rede de Especialistas</span>
+      <h2 class="section-title">Profissionais Parceiros</h2>
+      <p class="section-description">
+        Conte com pintores qualificados e certificados pela Amazônia Tintas para transformar
+        seu ambiente com qualidade, segurança e garantia.
+      </p>
+    </div>
+    <!-- Filter Controls -->
+    <div class="professionals-filter" data-aos="fade-up">
+      <ul class="nav nav-pills justify-content-center" id="professionals-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">
+            <i class="fas fa-users me-2"></i>Todos
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="residential-tab" data-bs-toggle="pill" data-bs-target="#residential" type="button" role="tab" aria-controls="residential" aria-selected="false">
+            <i class="fas fa-home me-2"></i>Residencial
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="commercial-tab" data-bs-toggle="pill" data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">
+            <i class="fas fa-building me-2"></i>Comercial
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="industrial-tab" data-bs-toggle="pill" data-bs-target="#industrial" type="button" role="tab" aria-controls="industrial" aria-selected="false">
+            <i class="fas fa-industry me-2"></i>Industrial
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="decorative-tab" data-bs-toggle="pill" data-bs-target="#decorative" type="button" role="tab" aria-controls="decorative" aria-selected="false">
+            <i class="fas fa-paint-brush me-2"></i>Efeitos Decorativos
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Professionals Cards -->
+    <div class="tab-content" id="professionals-tabContent" data-aos="fade-up" data-aos-delay="100">
+      <!-- All Professionals Tab -->
+      <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+        <div class="row g-4">
+          <!-- Professional Card 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="professional-card">
+              <div class="professional-certified-badge">
+                <i class="fas fa-certificate"></i> Certificado Premium
+              </div>
+              <div class="professional-header">
+                <div class="professional-image">
+                  <%= image_tag "https://img.freepik.com/fotos-premium/sorriso-de-retrato-e-homem-de-negocios-funcionario-profissional-ou-advogado-de-terno-com-mentalidade-de-carreira-e-confianca-no-bokeh-rosto-de-um-advogado-de-pessoa-juridica-ou-agente-dos-eua-para-trabalho-ou-empresa_590464-181293.jpg", alt: "Carlos Silva", class: "img-fluid", loading: "lazy" %>
+                </div>
+                <div class="professional-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <div class="professional-body">
+                <h3 class="professional-name">Carlos Silva</h3>
+                <p class="professional-title">Pintor Residencial e Comercial</p>
+                <div class="professional-expertise">
+                  <span class="expertise-tag">Residencial</span>
+                  <span class="expertise-tag">Comercial</span>
+                  <span class="expertise-tag">Texturas</span>
+                </div>
+                <div class="professional-experience">
+                  <div class="experience-item">
+                    <span class="experience-label">Experiência</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 90%"></div>
+                    </div>
+                    <span class="experience-value">12 anos</span>
+                  </div>
+                  <div class="experience-item">
+                    <span class="experience-label">Projetos</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 85%"></div>
+                    </div>
+                    <span class="experience-value">320+</span>
+                  </div>
+                </div>
+                <div class="professional-description">
+                  <p>Especialista em pintura residencial e comercial com mais de 12 anos de experiência. Trabalho com técnicas modernas e acabamento impecável.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Professional Card 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="professional-card">
+              <div class="professional-certified-badge">
+                <i class="fas fa-certificate"></i> Certificado Premium
+              </div>
+              <div class="professional-header">
+                <div class="professional-image">
+                  <%= image_tag "https://img.freepik.com/fotos-premium/mulher-de-negocios-e-bracos-em-um-retrato-serio-no-escritorio-para-carreira-como-empresario-na-empresa-foco-profissional-feminino-e-rosto-com-braco-como-lider-em-um-local-de-trabalho-para-trabalho-com-funcionario_590464-183765.jpg", alt: "Ana Oliveira", class: "img-fluid", loading: "lazy" %>
+                </div>
+                <div class="professional-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>5.0</span>
+                </div>
+              </div>
+              <div class="professional-body">
+                <h3 class="professional-name">Ana Oliveira</h3>
+                <p class="professional-title">Especialista em Efeitos Decorativos</p>
+                <div class="professional-expertise">
+                  <span class="expertise-tag">Efeitos Especiais</span>
+                  <span class="expertise-tag">Marmorização</span>
+                  <span class="expertise-tag">Residencial</span>
+                </div>
+                <div class="professional-experience">
+                  <div class="experience-item">
+                    <span class="experience-label">Experiência</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 80%"></div>
+                    </div>
+                    <span class="experience-value">8 anos</span>
+                  </div>
+                  <div class="experience-item">
+                    <span class="experience-label">Projetos</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 75%"></div>
+                    </div>
+                    <span class="experience-value">180+</span>
+                  </div>
+                </div>
+                <div class="professional-description">
+                  <p>Especialista em técnicas decorativas e efeitos especiais. Cimento queimado, marmorização, pátina e outros efeitos exclusivos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Professional Card 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="professional-card">
+              <div class="professional-certified-badge">
+                <i class="fas fa-certificate"></i> Certificado Premium
+              </div>
+              <div class="professional-header">
+                <div class="professional-image">
+                  <%= image_tag "https://media.gettyimages.com/id/1645521990/pt/v%C3%ADdeo/face-happy-lawyer-and-man-in-office-corporate-company-and-workplace-portrait-smile-and.jpg?s=640x640&k=20&c=TEJB58PJFlPSZye8_OeXfl9th16eqDiK-01diWp4PQM=", alt: "Rodrigo Santos", class: "img-fluid", loading: "lazy" %>
+                </div>
+                <div class="professional-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>4.9</span>
+                </div>
+              </div>
+              <div class="professional-body">
+                <h3 class="professional-name">Rodrigo Santos</h3>
+                <p class="professional-title">Pintor Industrial e Comercial</p>
+                <div class="professional-expertise">
+                  <span class="expertise-tag">Industrial</span>
+                  <span class="expertise-tag">Comercial</span>
+                  <span class="expertise-tag">Epóxi</span>
+                </div>
+                <div class="professional-experience">
+                  <div class="experience-item">
+                    <span class="experience-label">Experiência</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 95%"></div>
+                    </div>
+                    <span class="experience-value">15 anos</span>
+                  </div>
+                  <div class="experience-item">
+                    <span class="experience-label">Projetos</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 100%"></div>
+                    </div>
+                    <span class="experience-value">450+</span>
+                  </div>
+                </div>
+                <div class="professional-description">
+                  <p>Especializado em pintura industrial, pisos epóxi e grandes superfícies comerciais. Atendimento a normas técnicas e de segurança.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Residential Tab -->
+      <div class="tab-pane fade" id="residential" role="tabpanel" aria-labelledby="residential-tab">
+        <div class="row g-4">
+          <!-- Show only residential professionals here -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="professional-card">
+              <div class="professional-certified-badge">
+                <i class="fas fa-certificate"></i> Certificado Premium
+              </div>
+              <div class="professional-header">
+                <div class="professional-image">
+                  <%= image_tag "https://img.freepik.com/fotos-premium/sorriso-de-retrato-e-homem-de-negocios-funcionario-profissional-ou-advogado-de-terno-com-mentalidade-de-carreira-e-confianca-no-bokeh-rosto-de-um-advogado-de-pessoa-juridica-ou-agente-dos-eua-para-trabalho-ou-empresa_590464-181293.jpg", alt: "Carlos Silva", class: "img-fluid", loading: "lazy" %>
+                </div>
+                <div class="professional-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <div class="professional-body">
+                <h3 class="professional-name">Carlos Silva</h3>
+                <p class="professional-title">Pintor Residencial e Comercial</p>
+                <div class="professional-expertise">
+                  <span class="expertise-tag">Residencial</span>
+                  <span class="expertise-tag">Comercial</span>
+                  <span class="expertise-tag">Texturas</span>
+                </div>
+                <div class="professional-experience">
+                  <div class="experience-item">
+                    <span class="experience-label">Experiência</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 90%"></div>
+                    </div>
+                    <span class="experience-value">12 anos</span>
+                  </div>
+                  <div class="experience-item">
+                    <span class="experience-label">Projetos</span>
+                    <div class="experience-bar">
+                      <div class="experience-progress" style="width: 85%"></div>
+                    </div>
+                    <span class="experience-value">320+</span>
+                  </div>
+                </div>
+                <div class="professional-description">
+                  <p>Especialista em pintura residencial e comercial com mais de 12 anos de experiência. Trabalho com técnicas modernas e acabamento impecável.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

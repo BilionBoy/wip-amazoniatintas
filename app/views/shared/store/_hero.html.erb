@@ -1,0 +1,68 @@
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-background">
+    <%= image_tag "https://scontent.fjpr3-1.fna.fbcdn.net/v/t51.75761-15/487879963_18066643012943129_7500818795242360570_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yTiViL7DeTUQ7kNvwGZ85I0&_nc_oc=AdncPW21PQOYvLgz8WikSue-CE2LtEODH0CqCVmIM-idPvlT4bdFrs5ki4CrOo2tCkI&_nc_zt=23&_nc_ht=scontent.fjpr3-1.fna&_nc_gid=_g4e_MSwfIiTOBMQ7ix-3w&oh=00_AfEzWgLovRTnw_8drpJGrWpOl78Lq2T8vSp1lI6yg-2JRA&oe=6816C9AE", alt: "Amazônia Tintas", class: "hero-bg-image" %>
+    <div class="overlay"></div>
+  </div>
+  <div class="paint-splash-container">
+    <div class="paint-splash splash-1"></div>
+    <div class="paint-splash splash-2"></div>
+    <div class="paint-splash splash-3"></div>
+  </div>
+  <div class="container position-relative">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6">
+        <div class="hero-content" data-aos="fade-right">
+          <h1 class="display-4 fw-bold mb-4">
+            Aqui na <span class="text-gradient">Amazônia tintas</span> você
+            tem uma linha completa
+            <span class="text-gradient">de tintas </span>
+          </h1>
+          <p class="lead mb-4">
+            Descubra nossa linha completa de tintas premium e acessórios
+            para pintura. Qualidade e variedade para transformar seus
+            espaços.
+          </p>
+          <div class="hero-buttons">
+            <%= link_to "#produtos", class: "btn btn-primary btn-lg me-3" do %>
+              <span>Nossos Produtos</span>
+              <i class="fas fa-arrow-right ms-2"></i>
+            <% end %>
+            <%= link_to "#simulador", class: "btn btn-outline-primary btn-lg" do %>
+              <i class="fas fa-palette me-2"></i>
+              <span>Simular Cores</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image" data-aos="fade-left">
+          <div class="paint-cans">
+            <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/novacor-piso-premium.png", alt: "Lata de Tinta Premium", class: "paint-can can-1" %>
+            <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/aquacryl-300x300.png", alt: "Lata de Tinta Acrílica", class: "paint-can can-2" %>
+            <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2024/09/Embalagem-Design-Acetinado-243x300.png", alt: "Lata de Tinta Esmalte", class: "paint-can can-3" %>
+            <div class="paint-splash-effect"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-down">
+    <%= link_to "#features" do %>
+      <i class="fas fa-chevron-down"></i>
+    <% end %>
+  </div>
+  <div class="shape-divider">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"
+      ></path>
+    </svg>
+  </div>
+</section>
