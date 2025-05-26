@@ -15,6 +15,9 @@ pt-BR:
       l_segmento:
         one: "Segmento"
         other: "Segmentos"
+      l_categoria:
+        one: "Categoria"
+        other: "Categorias"
     attributes:
       user:
         nome: "Nome"
@@ -26,6 +29,11 @@ pt-BR:
         created_at: "Criado em"
         updated_at: "Atualizado em"
       l_tipo_usuario:
+        descricao: "Descrição"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      l_categoria:
+        nome: "Nome"
         descricao: "Descrição"
         created_at: "Criado em"
         updated_at: "Atualizado em"
