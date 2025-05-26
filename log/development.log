@@ -25792,3 +25792,305 @@ Processing by LCategoriasController#index as HTML
 Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.9ms)
 
 
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:30:53 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered l_categorias/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `l_categoria_index_path' for an instance of #<Class:0x0000774b7ba75010>):
+
+Causes:
+NoMethodError (undefined method `l_categoria_index_path' for an instance of #<Class:0x0000774b7ba75010>)
+    3: <span class="breadcrumb-item"><%= link_to t("activerecord.models.#{LCategoria.model_name.i18n_key}.other"), l_categorias_path, class: "text-dark" %></span>
+    4: <span class="breadcrumb-item active"><%= t("helpers.submit.#{params[:action]}") %></span>
+    5: <% end %>
+    6: <%= simple_form_for(@l_categoria) do |f| %>
+    7: <div class="card">
+    8:   <div class="card-header">
+    9:     <h5 class="my-0">
+  
+app/views/l_categorias/_form.html.erb:6
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:31:17 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered l_categorias/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil):
+
+Causes:
+NoMethodError (undefined method `model_name' for nil)
+    2:   <span class="breadcrumb-item"><%= link_to t("activerecord.models.#{LCategoria.model_name.i18n_key}.other"), l_categorias_path, class: "text-dark" %></span>
+    3:   <span class="breadcrumb-item active"><%= t("helpers.submit.#{params[:action]}") %></span>
+    4: <% end %>
+    5: <%= simple_form_for(@l_categorias) do |f| %>
+    6:   <div class="card">
+    7:     <div class="card-header">
+    8:       <h5 class="my-0">
+  
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:31:18 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered l_categorias/_form.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil):
+
+Causes:
+NoMethodError (undefined method `model_name' for nil)
+    2:   <span class="breadcrumb-item"><%= link_to t("activerecord.models.#{LCategoria.model_name.i18n_key}.other"), l_categorias_path, class: "text-dark" %></span>
+    3:   <span class="breadcrumb-item active"><%= t("helpers.submit.#{params[:action]}") %></span>
+    4: <% end %>
+    5: <%= simple_form_for(@l_categorias) do |f| %>
+    6:   <div class="card">
+    7:     <div class="card-header">
+    8:       <h5 class="my-0">
+  
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:31:27 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered l_categorias/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `l_categoria_index_path' for an instance of #<Class:0x0000774b7beb92e8>):
+
+Causes:
+NoMethodError (undefined method `l_categoria_index_path' for an instance of #<Class:0x0000774b7beb92e8>)
+    2:   <span class="breadcrumb-item"><%= link_to t("activerecord.models.#{LCategoria.model_name.i18n_key}.other"), l_categorias_path, class: "text-dark" %></span>
+    3:   <span class="breadcrumb-item active"><%= t("helpers.submit.#{params[:action]}") %></span>
+    4: <% end %>
+    5: <%= simple_form_for(@l_categoria) do |f| %>
+    6:   <div class="card">
+    7:     <div class="card-header">
+    8:       <h5 class="my-0">
+  
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:31:40 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered l_categorias/_form.html.erb (Duration: 4.1ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionView::Template::Error (Association :l_segmento not found):
+
+Causes:
+RuntimeError (Association :l_segmento not found)
+    20:           <%= f.input :descricao, input_html: { class: "capitalize"}, placeholder: "Descricao"  %>
+    21:         </div>
+    22:         <div class="col-12">
+    23:           <%= f.association :l_segmento, input_html: { class: "capitalize"}, placeholder: "L segmento"  %>
+    24:         </div>
+    25:       </div>
+    26:     </div>
+  
+app/views/l_categorias/_form.html.erb:23
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:31:41 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered l_categorias/_form.html.erb (Duration: 1.9ms | GC: 0.2ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (Association :l_segmento not found):
+
+Causes:
+RuntimeError (Association :l_segmento not found)
+    20:           <%= f.input :descricao, input_html: { class: "capitalize"}, placeholder: "Descricao"  %>
+    21:         </div>
+    22:         <div class="col-12">
+    23:           <%= f.association :l_segmento, input_html: { class: "capitalize"}, placeholder: "L segmento"  %>
+    24:         </div>
+    25:       </div>
+    26:     </div>
+  
+app/views/l_categorias/_form.html.erb:23
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:32:54 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.6ms | GC: 0.8ms)
+  [1m[36mLSegmento Load (0.3ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 14.0ms | GC: 1.2ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 14.4ms | GC: 1.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | GC: 1.5ms)
+Completed 200 OK in 37ms (Views: 17.8ms | ActiveRecord: 5.6ms (2 queries, 0 cached) | GC: 5.0ms)
+
+
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:33:18 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 2.6ms | GC: 1.9ms)
+  Rendered l_categorias/_form.html.erb (Duration: 14.3ms | GC: 11.2ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 16.4ms | GC: 12.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | GC: 13.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 33.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x0000774bd8247598>::Segmento):
+
+Causes:
+NameError (uninitialized constant #<Class:0x0000774bd8247598>::Segmento)
+    20:           <%= f.input :descricao, input_html: { class: "capitalize"}, placeholder: "Descricao"  %>
+    21:         </div>
+    22:         <div class="col-12">
+    23:           <%= f.association :segmento,  collection: Segmento.all,  label_method: :nome,  value_method: :id,  input_html: { class: "capitalize" },  placeholder: "Segmento" %>
+    24:         </div>
+    25:       </div>
+    26:     </div>
+  
+app/views/l_categorias/_form.html.erb:23
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:33:32 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.4ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 8.7ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 9.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for an instance of LSegmento):
+
+Causes:
+NoMethodError (undefined method `nome' for an instance of LSegmento)
+    20:           <%= f.input :descricao, input_html: { class: "capitalize"}, placeholder: "Descricao"  %>
+    21:         </div>
+    22:         <div class="col-12">
+    23:           <%= f.association :l_segmento,  collection: LSegmento.all,  label_method: :nome,  value_method: :id,  input_html: { class: "capitalize" },  placeholder: "Segmento" %>
+    24:         </div>
+    25:       </div>
+    26:     </div>
+  
+app/views/l_categorias/_form.html.erb:23
+app/views/l_categorias/_form.html.erb:5
+app/views/l_categorias/new.html.erb:1
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:33:41 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 8.6ms | GC: 0.3ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 9.2ms | GC: 0.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 0.5ms)
+Completed 200 OK in 29ms (Views: 14.0ms | ActiveRecord: 5.4ms (2 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:33:56 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 7.8ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 8.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 11.2ms | ActiveRecord: 4.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:34:13 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.3ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 9.5ms | GC: 1.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 9.9ms | GC: 1.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | GC: 1.3ms)
+Completed 200 OK in 31ms (Views: 12.7ms | ActiveRecord: 5.3ms (2 queries, 0 cached) | GC: 5.8ms)
+
+
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:34:17 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.3ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 8.2ms | GC: 0.2ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 8.6ms | GC: 0.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 0.3ms)
+Completed 200 OK in 25ms (Views: 11.6ms | ActiveRecord: 4.9ms (2 queries, 0 cached) | GC: 0.7ms)
+
+

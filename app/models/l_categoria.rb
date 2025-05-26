@@ -3,5 +3,5 @@
 class LCategoria < ApplicationRecord
   self.table_name = 'l_categorias'
 
-  # Adicione aqui quaisquer métodos ou validações padrão para seus modelos
+  belongs_to :l_segmento    
 end

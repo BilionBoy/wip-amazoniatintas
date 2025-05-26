@@ -37,6 +37,7 @@ pt-BR:
         descricao: "Descrição"
         created_at: "Criado em"
         updated_at: "Atualizado em"
+        l_segmento: "Segmento"
   date:
     abbr_day_names:
       - dom
