@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :l_segmentos
   root 'home#index'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
   
@@ -7,6 +6,7 @@ Rails.application.routes.draw do
   get  'store/index'
   
   resources :l_tipo_usuarios
+  resources :l_segmentos
   
   get 'up' => 'rails/health#show', as: :rails_health_check
 end
