@@ -82,10 +82,16 @@ gem 'caxlsx_rails'
 # Nested Forms
 gem 'cocoon'
 
+#fiddle
+gem 'fiddle'
+
 # Identificador Unico Universal
 # gem "uuid"
 # Autorização de usuários
 gem 'cancancan'
+
+#Gem processador de imagem AD
+gem "image_processing", ">= 1.2"
 
 # Soft deleted_at
 gem 'paranoia'

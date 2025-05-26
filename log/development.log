@@ -26263,3 +26263,608 @@ Processing by LCategoriasController#index as HTML
 Completed 200 OK in 34ms (Views: 19.3ms | ActiveRecord: 6.6ms (5 queries, 1 cached) | GC: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-05-26 08:01:54 -0400
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: amazoniatintas.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+
+Causes:
+PG::ConnectionBad (connection to server at "127.0.0.1", port 5432 failed: FATAL:  autenticação do tipo senha falhou para o usuário "amazoniatintas"
+)
+  
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:982:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:994:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1099:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1076:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:54:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:53:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1434:in 'ActiveRecord::Migrator#initialize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'Class#new'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'ActiveRecord::MigrationContext#open'
+activerecord (7.2.2.1) lib/active_record/migration.rb:776:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (7.2.2.1) lib/active_record/migration.rb:775:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'Array#each'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:753:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (7.2.2.1) lib/active_record/migration.rb:668:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'Thread::Mutex#synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in 'ActionDispatch::RequestId#call'
+rack (3.1.14) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.14) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.14) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-26 08:01:59 -0400
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: amazoniatintas.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+
+Causes:
+PG::ConnectionBad (connection to server at "127.0.0.1", port 5432 failed: FATAL:  autenticação do tipo senha falhou para o usuário "amazoniatintas"
+)
+  
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:982:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:994:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1099:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1076:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:54:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:53:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1434:in 'ActiveRecord::Migrator#initialize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'Class#new'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'ActiveRecord::MigrationContext#open'
+activerecord (7.2.2.1) lib/active_record/migration.rb:776:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (7.2.2.1) lib/active_record/migration.rb:775:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'Array#each'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:753:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (7.2.2.1) lib/active_record/migration.rb:668:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'Thread::Mutex#synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in 'ActionDispatch::RequestId#call'
+rack (3.1.14) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.14) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.14) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/" for 127.0.0.1 at 2025-05-26 10:52:00 -0400
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: amazoniatintas.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+
+Causes:
+PG::ConnectionBad (connection to server at "127.0.0.1", port 5432 failed: FATAL:  autenticação do tipo senha falhou para o usuário "amazoniatintas"
+)
+  
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:982:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:994:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1099:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1076:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:54:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:53:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1434:in 'ActiveRecord::Migrator#initialize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'Class#new'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'ActiveRecord::MigrationContext#open'
+activerecord (7.2.2.1) lib/active_record/migration.rb:776:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (7.2.2.1) lib/active_record/migration.rb:775:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'Array#each'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:753:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (7.2.2.1) lib/active_record/migration.rb:668:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'Thread::Mutex#synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in 'ActionDispatch::RequestId#call'
+rack (3.1.14) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.14) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.14) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-26 10:52:05 -0400
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: amazoniatintas.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+
+Causes:
+PG::ConnectionBad (connection to server at "127.0.0.1", port 5432 failed: FATAL:  autenticação do tipo senha falhou para o usuário "amazoniatintas"
+)
+  
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:982:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:994:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1099:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1076:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:54:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:53:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1434:in 'ActiveRecord::Migrator#initialize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'Class#new'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'ActiveRecord::MigrationContext#open'
+activerecord (7.2.2.1) lib/active_record/migration.rb:776:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (7.2.2.1) lib/active_record/migration.rb:775:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'Array#each'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:753:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (7.2.2.1) lib/active_record/migration.rb:668:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'Thread::Mutex#synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in 'ActionDispatch::RequestId#call'
+rack (3.1.14) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.14) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.14) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/" for 127.0.0.1 at 2025-05-26 11:33:56 -0400
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: amazoniatintas.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+
+Causes:
+PG::ConnectionBad (connection to server at "127.0.0.1", port 5432 failed: FATAL:  role "amazoniatintas" não existe
+)
+  
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:65:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter.new_client'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:982:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#connect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:994:in 'ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#reconnect'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#reconnect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#connect!'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (7.2.2.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in 'ActiveRecord::ConnectionAdapters::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1099:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1076:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#table_exists?'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:54:in 'block in ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (7.2.2.1) lib/active_record/schema_migration.rb:53:in 'ActiveRecord::SchemaMigration#create_table'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1434:in 'ActiveRecord::Migrator#initialize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'Class#new'
+activerecord (7.2.2.1) lib/active_record/migration.rb:1282:in 'ActiveRecord::MigrationContext#open'
+activerecord (7.2.2.1) lib/active_record/migration.rb:776:in 'block (2 levels) in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in 'ActiveRecord::PendingMigrationConnection.with_temporary_pool'
+activerecord (7.2.2.1) lib/active_record/migration.rb:775:in 'block in ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'Array#each'
+activerecord (7.2.2.1) lib/active_record/migration.rb:774:in 'ActiveRecord::Migration.pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:753:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (7.2.2.1) lib/active_record/migration.rb:668:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'Thread::Mutex#synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in 'Sprockets::Rails::QuietAssets#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in 'ActionDispatch::RequestId#call'
+rack (3.1.14) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.14) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.14) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+  [1m[35m (81.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (54.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (28.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (36.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (41.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-05-26 15:38:41.072992', '2025-05-26 15:38:41.072996') RETURNING "key"[0m
+Migrating to CreateLTipoUsuarios (20250514163831)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "l_tipo_usuarios" ("id" bigserial primary key, "descricao" character varying NOT NULL, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250514163831') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20250515160011)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "name" character varying NOT NULL, "l_tipo_usuario_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_111809f732"
+FOREIGN KEY ("l_tipo_usuario_id")
+  REFERENCES "l_tipo_usuarios" ("id")
+)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_users_on_l_tipo_usuario_id" ON "users" ("l_tipo_usuario_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250515160011') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameDescriptionToDescricaoInLTipoUsuarios (20250519162356)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250519162356') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameNameToNomeInUsers (20250519162947)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" RENAME COLUMN "name" TO "nome"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250519162947') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLSegmentos (20250526080343)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.3ms)[0m  [1m[35mCREATE TABLE "l_segmentos" ("id" bigserial primary key, "descricao" character varying, "created_by" character varying, "updated_by" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250526080343') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLCategorias (20250526082706)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "l_categorias" ("id" bigserial primary key, "nome" character varying, "descricao" text, "l_segmento_id" bigint, "created_by" character varying, "updated_by" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_l_categorias_on_l_segmento_id" ON "l_categorias" ("l_segmento_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250526082706') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProdutos (20250526124922)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "produtos" ("id" bigserial primary key, "nome" character varying, "descricao" text, "preco" decimal, "created_by" character varying, "updated_by" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250526124922') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20250526130141)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (104.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250526130141') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-05-26 11:38:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 205ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:39:01 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 5.1ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 1966.9ms | GC: 0.3ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 5238.1ms | GC: 0.9ms)
+Completed 200 OK in 6472ms (Views: 5546.0ms | ActiveRecord: 55.6ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:39:14 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 10.6ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:39:15 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 13.8ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:39:19 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 738ms (ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 6.6ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 15.0ms | GC: 0.0ms)
+Completed 200 OK in 653ms (Views: 16.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:39:25 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 260ms (Views: 10.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-26 11:40:27 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  [1m[36mLTipoUsuario Load (1.3ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios"[0m
+  â†³ app/views/users/registrations/new.html.erb:24:in 'Enumerable#map'
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 197.3ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 203.7ms | GC: 0.0ms)
+Completed 200 OK in 306ms (Views: 299.4ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:40:29 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 15.8ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-26 11:40:51 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Entrar"}
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 8.3ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 18.8ms | GC: 0.0ms)
+Completed 200 OK in 285ms (Views: 19.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
