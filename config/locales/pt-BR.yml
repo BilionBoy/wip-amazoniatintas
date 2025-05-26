@@ -7,26 +7,28 @@ pt-BR:
       one: "Página"
       other: "Páginas"
     prev: "Anterior"
-    next: "Próxima"
-
   activerecord:
     models:
       l_tipo_usuario:
         one: "Tipo de Usuário"
-        other: "Tipos de Usuários"
-    errors:
-      messages:
-        record_invalid: "A validação falhou: %{errors}"
-        restrict_dependent_destroy:
-          has_one: Não é possível excluir o registro pois existe um %{record} dependente
-          has_many: Não é possível excluir o registro pois existem %{record} dependentes
-      models:
-        funcao:
-          one: "Funcao"
-          other: "Funcões"
-      attributes:
-        l_tipo_usuario:
-          descricao: "Descrição"
+        other: "Tipos de Usuário"
+      l_segmento:
+        one: "Segmento"
+        other: "Segmentos"
+    attributes:
+      user:
+        nome: "Nome"
+        descricao: "Descrição"
+        email: "Email"
+        password: "Senha"
+        password_confirmation: "Confirmação de Senha"
+        g_tipo_usuario: "Tipo de Usuário"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      l_tipo_usuario:
+        descricao: "Descrição"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
   date:
     abbr_day_names:
       - dom
