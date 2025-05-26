@@ -16,7 +16,7 @@ class LCategoriaTest < ApplicationSystemTestCase
 
     fill_in "Descricao", with: @l_categoria.descricao
     fill_in "L segmento", with: @l_categoria.l_segmento_id
-    fill_in "Titulo", with: @l_categoria.titulo
+    fill_in "Nome", with: @l_categoria.nome
     click_on "Create L categoria"
 
     assert_text "L categoria was successfully created"
@@ -29,7 +29,7 @@ class LCategoriaTest < ApplicationSystemTestCase
 
     fill_in "Descricao", with: @l_categoria.descricao
     fill_in "L segmento", with: @l_categoria.l_segmento_id
-    fill_in "Titulo", with: @l_categoria.titulo
+    fill_in "Nome", with: @l_categoria.nome
     click_on "Update L categoria"
 
     assert_text "L categoria was successfully updated"

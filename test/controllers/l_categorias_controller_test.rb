@@ -17,7 +17,7 @@ class LCategoriasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create l_categoria" do
     assert_difference("LCategoria.count") do
-      post l_categorias_url, params: { l_categoria: { descricao: @l_categoria.descricao, l_segmento_id: @l_categoria.l_segmento_id, titulo: @l_categoria.titulo } }
+      post l_categorias_url, params: { l_categoria: { descricao: @l_categoria.descricao, l_segmento_id: @l_categoria.l_segmento_id, nome: @l_categoria.nome } }
     end
 
     assert_redirected_to l_categoria_url(LCategoria.last)
@@ -34,7 +34,7 @@ class LCategoriasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update l_categoria" do
-    patch l_categoria_url(@l_categoria), params: { l_categoria: { descricao: @l_categoria.descricao, l_segmento_id: @l_categoria.l_segmento_id, titulo: @l_categoria.titulo } }
+    patch l_categoria_url(@l_categoria), params: { l_categoria: { descricao: @l_categoria.descricao, l_segmento_id: @l_categoria.l_segmento_id, nome: @l_categoria.nome } }
     assert_redirected_to l_categoria_url(@l_categoria)
   end
 

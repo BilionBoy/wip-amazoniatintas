@@ -3,10 +3,13 @@
 class CreateLCategorias < ActiveRecord::Migration[7.2]
   def up
     create_table :l_categorias do |t|
-      t.string     :titulo
-      t.text       :descricao
+      t.string :nome
+      t.text :descricao
       t.references :l_segmento
-      t.datetime   :deleted_at
+          
+      t.string :created_by
+      t.string :updated_by
+      t.datetime :deleted_at
       t.timestamps
     end
   end
