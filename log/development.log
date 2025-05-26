@@ -26094,3 +26094,172 @@ Processing by LCategoriasController#new as HTML
 Completed 200 OK in 25ms (Views: 11.6ms | ActiveRecord: 4.9ms (2 queries, 0 cached) | GC: 0.7ms)
 
 
+Started GET "/store/index" for ::1 at 2025-05-26 04:34:36 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_features.html.erb (Duration: 0.9ms | GC: 0.2ms)
+  Rendered shared/store/_produtos.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 5.1ms | GC: 0.2ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 16.0ms | GC: 1.3ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/images/splash-blue.png" for ::1 at 2025-05-26 04:34:36 -0400
+Started GET "/images/paint-splash-floor.png" for ::1 at 2025-05-26 04:34:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/script.js" for ::1 at 2025-05-26 04:34:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started POST "/l_categorias" for ::1 at 2025-05-26 04:34:57 -0400
+Processing by LCategoriasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "l_categoria"=>{"nome"=>"Tinta Imobiliária", "descricao"=>"Tipo de Tinta", "l_segmento_id"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+  [1m[36mLCategoria Create (0.4ms)[0m  [1m[32mINSERT INTO "l_categorias" ("nome", "descricao", "l_segmento_id", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["nome", "Tinta Imobiliária"], ["descricao", "Tipo de Tinta"], ["l_segmento_id", 1], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-05-26 08:34:57.155236"], ["updated_at", "2025-05-26 08:34:57.155236"]]
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+Redirected to http://localhost:3000/l_categorias
+Completed 302 Found in 18ms (ActiveRecord: 3.8ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/l_categorias" for ::1 at 2025-05-26 04:34:57 -0400
+Processing by LCategoriasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/l_categorias_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_categorias/index.html.erb:24
+  Rendered l_categorias/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `l_categorium_path' for an instance of #<Class:0x0000774b7b680e78>):
+
+Causes:
+NoMethodError (undefined method `l_categorium_path' for an instance of #<Class:0x0000774b7b680e78>)
+    33:                     <%= link_to edit_l_categoria_path(l_categoria), class: "dropdown-item" do %>
+    34:                       <i class="ph-pen me-2"></i> Editar
+    35:                     <% end %>
+    36:                     <%= form_for l_categoria, method: :delete do |f| %>
+    37:                       <a class="dropdown-item hand-pointer " data-confirm-delete="<%= l_categoria_path(l_categoria) %>" data-csrf-token="<%= form_authenticity_token %>">
+    38:                         <i class="ph-trash-simple me-2"></i>Excluir
+    39:                       </a>
+  
+app/views/l_categorias/index.html.erb:36
+app/views/l_categorias/index.html.erb:24
+Started GET "/l_categorias" for ::1 at 2025-05-26 04:35:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LCategoriasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/l_categorias_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_categorias/index.html.erb:24
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  Rendered l_categorias/index.html.erb within layouts/application (Duration: 17.3ms | GC: 1.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 131.4ms | GC: 57.6ms)
+Completed 200 OK in 191ms (Views: 130.3ms | ActiveRecord: 22.2ms (4 queries, 0 cached) | GC: 73.1ms)
+
+
+Started GET "/l_categorias/new" for ::1 at 2025-05-26 04:35:25 -0400
+Processing by LCategoriasController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.4ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos"[0m
+  ↳ app/views/l_categorias/_form.html.erb:23
+  Rendered l_categorias/_form.html.erb (Duration: 15.5ms | GC: 0.0ms)
+  Rendered l_categorias/new.html.erb within layouts/application (Duration: 16.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/l_categorias" for ::1 at 2025-05-26 04:35:43 -0400
+Processing by LCategoriasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "l_categoria"=>{"nome"=>"Tinta Automotiva", "descricao"=>"Tipo de Tinta", "l_segmento_id"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+  [1m[36mLSegmento Load (0.3ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+  [1m[36mLCategoria Create (0.5ms)[0m  [1m[32mINSERT INTO "l_categorias" ("nome", "descricao", "l_segmento_id", "created_by", "updated_by", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["nome", "Tinta Automotiva"], ["descricao", "Tipo de Tinta"], ["l_segmento_id", 1], ["created_by", nil], ["updated_by", nil], ["deleted_at", nil], ["created_at", "2025-05-26 08:35:43.038914"], ["updated_at", "2025-05-26 08:35:43.038914"]]
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_categorias_controller.rb:22:in `create'
+Redirected to http://localhost:3000/l_categorias
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_categorias" for ::1 at 2025-05-26 04:35:43 -0400
+Processing by LCategoriasController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/l_categorias_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_categorias/index.html.erb:24
+  [1m[36mLSegmento Load (0.1ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  [1m[36mCACHE LSegmento Load (0.0ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  Rendered l_categorias/index.html.erb within layouts/application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 1.0ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/l_categorias" for ::1 at 2025-05-26 04:36:00 -0400
+Processing by LCategoriasController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/l_categorias_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_categorias/index.html.erb:24
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  [1m[36mCACHE LSegmento Load (0.0ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  Rendered l_categorias/index.html.erb within layouts/application (Duration: 17.8ms | GC: 0.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | GC: 0.6ms)
+Completed 200 OK in 34ms (Views: 19.3ms | ActiveRecord: 6.6ms (5 queries, 1 cached) | GC: 1.0ms)
+
+
