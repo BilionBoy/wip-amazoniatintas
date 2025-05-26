@@ -1,0 +1,433 @@
+<!-- Produtos Section -->
+<section id="produtos" class="products-section">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-subtitle">O Que Oferecemos</span>
+      <h2 class="section-title">Nossos Produtos</h2>
+      <p class="section-description">
+        Temos o que há de mais moderno em tintas imobiliárias, tintas
+        automotivas, compressores, furadeiras, impermeabilizantes, pincéis e
+        muito mais.
+      </p>
+    </div>
+    <div class="product-filter" data-aos="fade-up">
+      <ul
+        class="nav nav-pills justify-content-center"
+        id="products-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="imobiliarias-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#imobiliarias"
+            type="button"
+            role="tab"
+            aria-controls="imobiliarias"
+            aria-selected="true"
+          >
+            <i class="fas fa-home me-2"></i>Tintas Imobiliárias
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="automotivas-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#automotivas"
+            type="button"
+            role="tab"
+            aria-controls="automotivas"
+            aria-selected="false"
+          >
+            <i class="fas fa-car me-2"></i>Tintas Automotivas
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="industriais-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#industriais"
+            type="button"
+            role="tab"
+            aria-controls="industriais"
+            aria-selected="false"
+          >
+            <i class="fas fa-industry me-2"></i>Tintas Industriais
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="acessorios-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#acessorios"
+            type="button"
+            role="tab"
+            aria-controls="acessorios"
+            aria-selected="false"
+          >
+            <i class="fas fa-tools me-2"></i>Acessórios
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content" id="products-tabContent">
+      <!-- Tintas Imobiliárias -->
+      <div
+        class="tab-pane fade show active"
+        id="imobiliarias"
+        role="tabpanel"
+        aria-labelledby="imobiliarias-tab"
+      >
+        <div class="row g-4">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="product-card">
+              <div class="product-badge">Destaque</div>
+              <div class="product-image">
+                <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/84-300x300.png", alt: "Tinta Acrílica Premium", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Premium</span>
+                <h3 class="product-title">Tinta Acrílica Premium</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(4.5)</span>
+                </div>
+                <p class="product-description">
+                  Tinta de alta qualidade para ambientes internos e externos
+                  com acabamento perfeito e alta durabilidade.
+                </p>
+                <div class="product-price">
+                  <span>R$ 289,90</span>
+                  <span class="discount">-15%</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="product-card">
+              <div class="product-image">
+                <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/21-300x300.png", alt: "Textura Decorativa", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Decorativa</span>
+                <h3 class="product-title">Textura Cimento Queimado</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(4.0)</span>
+                </div>
+                <p class="product-description">
+                  Textura para efeitos decorativos em paredes com acabamento
+                  sofisticado e moderno.
+                </p>
+                <div class="product-price">
+                  <span>R$ 159,90</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="product-card">
+              <div class="product-image">
+                <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/corante-liquido-globocor-300x300.png", alt: "Esmalte Sintético", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Esmalte</span>
+                <h3 class="product-title">Esmalte Sintético Acetinado</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+                <p class="product-description">
+                  Esmalte de alta durabilidade para madeiras e metais com
+                  secagem rápida e acabamento perfeito.
+                </p>
+                <div class="product-price">
+                  <span class="old-price">R$ 129,90</span>
+                  <span>R$ 109,90</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="product-card">
+              <div class="product-badge">Novo</div>
+              <div class="product-image">
+                <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/88-1-300x300.png", alt: "Tinta Antibacteriana", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Especial</span>
+                <h3 class="product-title">Tinta Antibacteriana</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(4.7)</span>
+                </div>
+                <p class="product-description">
+                  Tinta especial com proteção antibacteriana para ambientes
+                  que exigem higiene e cuidados especiais.
+                </p>
+                <div class="product-price">
+                  <span>R$ 349,90</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <%= link_to "#catalogo", class: "btn btn-primary" do %>
+            Ver Catálogo Completo <i class="fas fa-arrow-right ms-2"></i>
+          <% end %>
+        </div>
+      </div>
+      <!-- Tintas Automotivas -->
+      <div
+        class="tab-pane fade"
+        id="automotivas"
+        role="tabpanel"
+        aria-labelledby="automotivas-tab"
+      >
+        <div class="row g-4">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="product-card">
+              <div class="product-badge">Premium</div>
+              <div class="product-image">
+                <%= image_tag "https://sherwin.com.br/wp-content/uploads/sites/11/2022/06/88-1-300x300.png", alt: "Tinta Automotiva Premium", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Automotiva</span>
+                <h3 class="product-title">Tinta Automotiva Premium</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+                <p class="product-description">
+                  Tinta de alta qualidade para acabamento automotivo
+                  profissional com brilho intenso.
+                </p>
+                <div class="product-price">
+                  <span>R$ 459,90</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tintas Industriais -->
+      <div
+        class="tab-pane fade"
+        id="industriais"
+        role="tabpanel"
+        aria-labelledby="industriais-tab"
+      >
+        <div class="row g-4">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="product-card">
+              <div class="product-badge">Industrial</div>
+              <div class="product-image">
+                <%= image_tag "https://www.sherwin-williams.com.br/wp-content/uploads/2021/07/Lata_Novacor_Piso_Premium_18L-1.png", alt: "Tinta Epóxi", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Epóxi</span>
+                <h3 class="product-title">Tinta Epóxi Industrial</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+                <p class="product-description">
+                  Tinta epóxi de alta resistência para pisos industriais e
+                  áreas de alto tráfego.
+                </p>
+                <div class="product-price">
+                  <span>R$ 499,90</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Acessórios -->
+      <div
+        class="tab-pane fade"
+        id="acessorios"
+        role="tabpanel"
+        aria-labelledby="acessorios-tab"
+      >
+        <div class="row g-4">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="product-card">
+              <div class="product-image">
+                <%= image_tag "https://images.tcdn.com.br/img/img_prod/769840/kit_pintura_com_5_pecas_atlas_1045_1_20201214152854.jpg", alt: "Kit de Pintura", class: "img-fluid", loading: "lazy" %>
+                <div class="product-actions">
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Ver Detalhes" do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to "#", class: "product-action-btn", data: { bs_toggle: "tooltip" }, title: "Solicitar Orçamento" do %>
+                    <i class="fas fa-shopping-cart"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Kit</span>
+                <h3 class="product-title">Kit de Pintura Profissional</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(4.7)</span>
+                </div>
+                <p class="product-description">
+                  Kit completo com rolo, bandeja, pincel e acessórios para
+                  pintura profissional.
+                </p>
+                <div class="product-price">
+                  <span class="old-price">R$ 129,90</span>
+                  <span>R$ 99,90</span>
+                </div>
+                <div class="product-footer">
+                  <%= link_to "#", class: "btn btn-outline-primary btn-product-details", style: "color: #00a651" do %>
+                    Saiba Mais
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
