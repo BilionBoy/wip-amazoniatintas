@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :l_categorias
   root 'home#index'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
   
@@ -8,6 +7,8 @@ Rails.application.routes.draw do
   
   resources :l_tipo_usuarios
   resources :l_segmentos
+  resources :l_produtos
+  resources :l_categorias
   
   get 'up' => 'rails/health#show', as: :rails_health_check
 end

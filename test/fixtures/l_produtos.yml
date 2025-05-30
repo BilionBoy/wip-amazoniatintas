@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  l_categoria: one
+  titulo: MyString
+  descricao: MyText
+  preco: 9.99
+  quantidade_estoque: 1
+
+two:
+  l_categoria: two
+  titulo: MyString
+  descricao: MyText
+  preco: 9.99
+  quantidade_estoque: 1
