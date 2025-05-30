@@ -24,6 +24,9 @@ pt-BR:
       l_profissional:
         one: "Profissional"
         other: "Profissionais"
+      l_evento:
+        one: "Evento"
+        other: "Eventos"
     attributes:
       user:
         nome: "Nome"
@@ -60,6 +63,14 @@ pt-BR:
         nome: "Nome"
         especialidade: "Especialidade"
         descricao: "Descrição"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      l_evento:
+        titulo: "Título"
+        conteudo: "Conteúdo"
+        data_inicio: "Data de Início"
+        data_fim: "Data de Fim"
+        local: "Local"
         created_at: "Criado em"
         updated_at: "Atualizado em"
   date:
