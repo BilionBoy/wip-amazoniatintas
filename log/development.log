@@ -30521,3 +30521,70 @@ Processing by LProfissionaisController#index as HTML
 Completed 200 OK in 141ms (Views: 93.8ms | ActiveRecord: 22.9ms (3 queries, 0 cached) | GC: 29.1ms)
 
 
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:24:16 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.3ms | GC: 0.9ms)
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 15.4ms | GC: 11.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | GC: 1.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | GC: 21.7ms)
+Completed 200 OK in 80ms (Views: 32.8ms | ActiveRecord: 4.9ms (3 queries, 0 cached) | GC: 44.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:24:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for 127.0.0.1 at 2025-05-30 01:24:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:25:48 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.1ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:25:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for 127.0.0.1 at 2025-05-30 01:25:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:26:07 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
