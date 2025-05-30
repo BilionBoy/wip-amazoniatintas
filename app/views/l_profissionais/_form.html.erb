@@ -17,8 +17,8 @@
           <%= f.input :nome, input_html: { class: "capitalize"}, placeholder: "Nome"  %>
         </div>
         <div class="col-12">
-          <%= f.input :especialidade, input_html: { class: "capitalize"}, placeholder: "Especialidade"  %>
-        </div>
+        <%= f.input :especialidade,as: :select,collection: @especialidades,include_blank: "Selecione a especialidade",input_html: { class: "capitalize" } %>
+
         <div class="col-12">
           <%= f.input :descricao, input_html: { class: "capitalize"}, placeholder: "Descricao"  %>
         </div>

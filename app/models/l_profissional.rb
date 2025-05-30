@@ -15,4 +15,7 @@ class LProfissional < ApplicationRecord
   def purge_foto_profissional
     foto_profissional.purge
   end
+  def self.especialidades_padrao
+    %w[Residencial Comercial Industrial Decorativo]
+  end
 end

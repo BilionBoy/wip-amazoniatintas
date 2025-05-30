@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class LProfissionaisController < ApplicationController
   before_action :set_l_profissional, only: %i[show edit update destroy]
+  before_action :carregar_especialidades, only: %i[new edit create update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found
 
@@ -56,5 +57,8 @@ class LProfissionaisController < ApplicationController
 
   def handle_not_found
     redirect_to l_profissionais_path, alert: t('messages.not_found')
+  end
+  def carregar_especialidades
+    @especialidades = LProfissional.especialidades_padrao
   end
 end
