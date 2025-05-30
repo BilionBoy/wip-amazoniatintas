@@ -29997,3 +29997,1263 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:13:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | GC: 26.3ms)
+Completed 200 OK in 136ms (Views: 85.1ms | ActiveRecord: 23.1ms (1 query, 0 cached) | GC: 26.3ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLProduto Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.1ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  [1m[36mLProduto Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  Rendered shared/store/_produtos.html.erb (Duration: 34.4ms | GC: 1.7ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 35.5ms | GC: 1.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 38.3ms | GC: 2.0ms)
+Completed 200 OK in 102ms (Views: 31.5ms | ActiveRecord: 14.6ms (14 queries, 0 cached) | GC: 22.3ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:14:16 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be", "filename"=>"84-300x300"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 7rmi5hdy9uizc6j17k5wvtrtzzbb (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6MTk6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--9c40e23d6657a645b9b8dafde7d8144c9f1337cf/84-300x300.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6MTk6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--9c40e23d6657a645b9b8dafde7d8144c9f1337cf/84-300x300.png
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6MTk6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--9c40e23d6657a645b9b8dafde7d8144c9f1337cf/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:14:16 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"84-300x300"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:14:21 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 3.2ms | GC: 0.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.5ms | GC: 0.7ms)
+Completed 200 OK in 43ms (Views: 6.6ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 7.8ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:14:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:14:22 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:14:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.5ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 1.1ms | GC: 0.8ms)
+  Rendered layout layouts/home_application.erb (Duration: 4.0ms | GC: 0.8ms)
+Completed 200 OK in 89ms (Views: 5.2ms | ActiveRecord: 7.4ms (4 queries, 0 cached) | GC: 52.2ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 5.2ms | GC: 4.2ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 1.7ms | GC: 0.7ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 9.2ms | GC: 5.8ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 1.4ms | GC: 1.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 19.1ms | GC: 13.1ms)
+Completed 200 OK in 54ms (Views: 21.5ms | ActiveRecord: 7.1ms (4 queries, 0 cached) | GC: 15.9ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.6ms | GC: 0.6ms)
+Completed 200 OK in 96ms (Views: 6.4ms | ActiveRecord: 6.4ms (4 queries, 0 cached) | GC: 57.4ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 7.0ms | ActiveRecord: 6.4ms (4 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:56 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 7.0ms | GC: 0.6ms)
+Completed 200 OK in 55ms (Views: 7.9ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 12.4ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:57 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:16:04 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.5ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 4.3ms | ActiveRecord: 10.1ms (4 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:16:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:16:05 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:16:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 7.7ms | ActiveRecord: 6.2ms (4 queries, 0 cached) | GC: 7.0ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 1.8ms | GC: 0.7ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 4.3ms | GC: 0.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.4ms | GC: 0.7ms)
+Completed 200 OK in 44ms (Views: 7.9ms | ActiveRecord: 8.2ms (4 queries, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.5ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 4.4ms | ActiveRecord: 9.7ms (4 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.6ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 18.7ms | GC: 5.3ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 1.3ms (4 queries, 0 cached) | GC: 5.3ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:17:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 7.5ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 8.1ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateLProfissionais (20250530052002)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "l_profissionais" ("id" bigserial primary key, "nome" character varying, "especialidade" character varying, "descricao" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250530052002') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:20:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 3.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "l_profissionals" does not exist
+LINE 10:  WHERE a.attrelid = '"l_profissionals"'::regclass
+                             ^
+):
+
+Causes:
+PG::UndefinedTable (ERROR:  relation "l_profissionals" does not exist
+LINE 10:  WHERE a.attrelid = '"l_profissionals"'::regclass
+                             ^
+)
+  
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:20:45 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "l_profissionals" does not exist
+LINE 10:  WHERE a.attrelid = '"l_profissionals"'::regclass
+                             ^
+):
+
+Causes:
+PG::UndefinedTable (ERROR:  relation "l_profissionals" does not exist
+LINE 10:  WHERE a.attrelid = '"l_profissionals"'::regclass
+                             ^
+)
+  
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:22:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 91.1ms | GC: 29.1ms)
+Completed 200 OK in 141ms (Views: 93.8ms | ActiveRecord: 22.9ms (3 queries, 0 cached) | GC: 29.1ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:24:16 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.3ms | GC: 0.9ms)
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 15.4ms | GC: 11.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | GC: 1.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | GC: 21.7ms)
+Completed 200 OK in 80ms (Views: 32.8ms | ActiveRecord: 4.9ms (3 queries, 0 cached) | GC: 44.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:24:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for 127.0.0.1 at 2025-05-30 01:24:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:25:48 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.1ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:25:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for 127.0.0.1 at 2025-05-30 01:25:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:26:07 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:26:27 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 2.7ms)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:26:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/layout/assets/js/vendor/notifications/noty.min.js.map" for 127.0.0.1 at 2025-05-30 01:26:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/layout/assets/js/vendor/notifications/noty.min.js.map"):
+  
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2025-05-30 01:26:44 -0400
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:26:44 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-30 01:26:44 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 10.8ms | GC: 0.7ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 20.1ms | GC: 1.7ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-30 01:26:49 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mLTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios" WHERE "l_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 178ms (ActiveRecord: 2.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:26:49 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.7ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:26:49 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.4ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:27:25 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 5.0ms | ActiveRecord: 6.5ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:27:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:27:25 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:27:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:27:26 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 1.2ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 2.0ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:27:27 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.7ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.9ms)
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:27:51 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:27:52 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.6ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 01:27:52 -0400
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProduto Load (0.4ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 9.1ms | GC: 0.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.6ms)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 1.0ms (5 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/l_categorias" for 127.0.0.1 at 2025-05-30 01:27:52 -0400
+Processing by LCategoriasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/l_categorias_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_categorias/index.html.erb:24
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  [1m[36mCACHE LSegmento Load (0.0ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  [1m[36mCACHE LSegmento Load (0.0ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  [1m[36mCACHE LSegmento Load (0.0ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" WHERE "l_segmentos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_categorias/index.html.erb:43
+  Rendered l_categorias/index.html.erb within layouts/application (Duration: 16.0ms | GC: 2.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | GC: 3.8ms)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 2.6ms (7 queries, 3 cached) | GC: 3.8ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 01:27:53 -0400
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLProduto Load (0.6ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 7.2ms | GC: 0.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.5ms)
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 1.3ms (5 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:27:53 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 6.8ms | GC: 4.5ms)
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | GC: 0.9ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | GC: 23.1ms)
+Completed 200 OK in 43ms (Views: 28.9ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 32.8ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:27:54 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.8ms | GC: 0.7ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.3ms | GC: 0.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 2.4ms | GC: 0.7ms)
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 0.7ms (4 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:27:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:27:54 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:27:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:29:24 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:29:25 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.4ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 9.0ms | GC: 3.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 3.9ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 3.9ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:32:00 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.1ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.2ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.2ms)
+Completed 200 OK in 24ms (Views: 7.6ms | ActiveRecord: 3.3ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/l_profissionais/new" for 127.0.0.1 at 2025-05-30 01:32:01 -0400
+Processing by LProfissionaisController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered l_profissionais/_form.html.erb (Duration: 3.7ms | GC: 0.0ms)
+  Rendered l_profissionais/new.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:32:30 -0400
+Processing by LProfissionaisController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "l_profissional"=>{"nome"=>"Carlos Silva", "especialidade"=>"Pintor Residencial e Comercial", "descricao"=>"Especialista em pintura residencial e comercial com mais de 12 anos de experiência. Trabalho com técnicas modernas e acabamento impecável.", "foto_profissional"=>#<ActionDispatch::Http::UploadedFile:0x00007d2504e6fb08 @tempfile=#<Tempfile:/tmp/RackMultipart20250530-66462-7i4kn8.avif>, @content_type="image/avif", @original_filename="prof.avif", @headers="Content-Disposition: form-data; name=\"l_profissional[foto_profissional]\"; filename=\"prof.avif\"\r\nContent-Type: image/avif\r\n">}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mLProfissional Create (1.1ms)[0m  [1m[32mINSERT INTO "l_profissionais" ("nome", "especialidade", "descricao", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nome", "Carlos Silva"], ["especialidade", "Pintor Residencial e Comercial"], ["descricao", "Especialista em pintura residencial e comercial com mais de 12 anos de experiência. Trabalho com técnicas modernas e acabamento impecável."], ["deleted_at", nil], ["created_at", "2025-05-30 05:32:30.456275"], ["updated_at", "2025-05-30 05:32:30.456275"]]
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "s76ujbo3e2qxp9daxcmwhcqk65ey"], ["filename", "prof.avif"], ["content_type", "image/avif"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 12430], ["checksum", "NTL8TrYN+vBsJxkn7TNh3A=="], ["created_at", "2025-05-30 05:32:30.477996"]]
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "foto_profissional"], ["record_type", "LProfissional"], ["record_id", 1], ["blob_id", 4], ["created_at", "2025-05-30 05:32:30.479907"]]
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mLProfissional Update (0.8ms)[0m  [1m[33mUPDATE "l_profissionais" SET "updated_at" = $1 WHERE "l_profissionais"."id" = $2[0m  [["updated_at", "2025-05-30 05:32:30.481370"], ["id", 1]]
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+[36m  Disk Storage (0.3ms) [0m[32mUploaded file to key: s76ujbo3e2qxp9daxcmwhcqk65ey (checksum: NTL8TrYN+vBsJxkn7TNh3A==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 38888ea0-f935-4f6f-b500-77d8e555e776) to Async(default) with arguments: #<GlobalID:0x00007d2506241e60 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/4>>
+[ActiveJob] ↳ app/controllers/l_profissionais_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/l_profissionais
+Completed 302 Found in 49ms (ActiveRecord: 9.6ms (7 queries, 0 cached) | GC: 8.5ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:32:30 -0400
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776] Performing ActiveStorage::AnalyzeJob (Job ID: 38888ea0-f935-4f6f-b500-77d8e555e776) from Async(default) enqueued at 2025-05-30T05:32:30.493097329Z with arguments: #<GlobalID:0x00007d2506183ac8 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: s76ujbo3e2qxp9daxcmwhcqk65ey[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mActiveStorage::Blob Update (1.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":626,\"height\":417,\"analyzed\":true}"], ["id", 4]]
+Processing by LProfissionaisController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" WHERE "l_profissionais"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mLProfissional Update (0.7ms)[0m  [1m[33mUPDATE "l_profissionais" SET "updated_at" = $1 WHERE "l_profissionais"."id" = $2[0m  [["updated_at", "2025-05-30 05:32:30.565443"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776]   [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38888ea0-f935-4f6f-b500-77d8e555e776] Performed ActiveStorage::AnalyzeJob (Job ID: 38888ea0-f935-4f6f-b500-77d8e555e776) from Async(default) in 69.51ms
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.1ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 7.1ms | ActiveRecord: 3.3ms (3 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:32:47 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 5.0ms | ActiveRecord: 7.3ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:32:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:32:47 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:32:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:35:21 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProfissional Load (0.5ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais"[0m
+  ↳ app/controllers/store_controller.rb:19:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLProfissional Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/views/shared/store/_profissionals.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  Rendered shared/store/_profissionals.html.erb (Duration: 27.9ms | GC: 1.3ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 29.8ms | GC: 1.3ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 33.0ms | GC: 1.6ms)
+Completed 200 OK in 86ms (Views: 28.2ms | ActiveRecord: 17.0ms (8 queries, 0 cached) | GC: 4.8ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:35:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:35:21 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:35:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--a56dc3ba5ed75aeef6d1e171c35510a8a88999d4/prof.avif" for 127.0.0.1 at 2025-05-30 01:35:21 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as */*
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--a56dc3ba5ed75aeef6d1e171c35510a8a88999d4", "filename"=>"prof"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: s76ujbo3e2qxp9daxcmwhcqk65ey (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif" for 127.0.0.1 at 2025-05-30 01:35:21 -0400
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"prof"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:35:34 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProfissional Load (0.4ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais"[0m
+  ↳ app/controllers/store_controller.rb:19:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLProfissional Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/views/shared/store/_profissionals.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  Rendered shared/store/_profissionals.html.erb (Duration: 28.9ms | GC: 1.2ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 30.7ms | GC: 1.2ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 33.7ms | GC: 1.2ms)
+Completed 200 OK in 83ms (Views: 27.4ms | ActiveRecord: 19.4ms (8 queries, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:35:34 -0400
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:35:34 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:35:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif" for 127.0.0.1 at 2025-05-30 01:35:35 -0400
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"prof"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:35:49 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.6ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais"[0m
+  ↳ app/controllers/store_controller.rb:19:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLProfissional Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/views/shared/store/_profissionals.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  Rendered shared/store/_profissionals.html.erb (Duration: 24.3ms | GC: 1.9ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 25.5ms | GC: 1.9ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 27.4ms | GC: 1.9ms)
+Completed 200 OK in 74ms (Views: 23.1ms | ActiveRecord: 16.8ms (8 queries, 0 cached) | GC: 4.2ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:35:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:35:49 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:35:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif" for 127.0.0.1 at 2025-05-30 01:35:49 -0400
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"prof"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:36:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProfissional Load (0.6ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais"[0m
+  ↳ app/controllers/store_controller.rb:19:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_features.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mLProduto Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.1ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  [1m[36mLProduto Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  Rendered shared/store/_produtos.html.erb (Duration: 52.6ms | GC: 24.5ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 6.3ms | GC: 5.3ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/views/shared/store/_profissionals.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  Rendered shared/store/_profissionals.html.erb (Duration: 22.6ms | GC: 16.3ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 88.0ms | GC: 48.8ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.7ms | GC: 0.4ms)
+  Rendered layout layouts/home_application.erb (Duration: 99.8ms | GC: 57.7ms)
+Completed 200 OK in 144ms (Views: 93.5ms | ActiveRecord: 16.5ms (18 queries, 0 cached) | GC: 63.6ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be", "filename"=>"84-300x300"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 7rmi5hdy9uizc6j17k5wvtrtzzbb (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDI6MjIuNDY5WiIsInB1ciI6ImJsb2Jfa2V5In19--ceb055a160f52ccf4b9da2399c9751db48ae5354/84-300x300.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDI6MjIuNDY5WiIsInB1ciI6ImJsb2Jfa2V5In19--ceb055a160f52ccf4b9da2399c9751db48ae5354/84-300x300.png
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDI6MjIuNDY5WiIsInB1ciI6ImJsb2Jfa2V5In19--ceb055a160f52ccf4b9da2399c9751db48ae5354/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"84-300x300"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif" for 127.0.0.1 at 2025-05-30 01:37:27 -0400
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"prof"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
