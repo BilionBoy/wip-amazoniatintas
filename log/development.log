@@ -31173,3 +31173,87 @@ Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at
   
 ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
   
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProfissional Load (0.6ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais"[0m
+  ↳ app/controllers/store_controller.rb:19:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_features.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mLProduto Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.1ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  [1m[36mLProduto Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  Rendered shared/store/_produtos.html.erb (Duration: 52.6ms | GC: 24.5ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 6.3ms | GC: 5.3ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/views/shared/store/_profissionals.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  Rendered shared/store/_profissionals.html.erb (Duration: 22.6ms | GC: 16.3ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 88.0ms | GC: 48.8ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.7ms | GC: 0.4ms)
+  Rendered layout layouts/home_application.erb (Duration: 99.8ms | GC: 57.7ms)
+Completed 200 OK in 144ms (Views: 93.5ms | ActiveRecord: 16.5ms (18 queries, 0 cached) | GC: 63.6ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be", "filename"=>"84-300x300"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 7rmi5hdy9uizc6j17k5wvtrtzzbb (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDI6MjIuNDY5WiIsInB1ciI6ImJsb2Jfa2V5In19--ceb055a160f52ccf4b9da2399c9751db48ae5354/84-300x300.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDI6MjIuNDY5WiIsInB1ciI6ImJsb2Jfa2V5In19--ceb055a160f52ccf4b9da2399c9751db48ae5354/84-300x300.png
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDI6MjIuNDY5WiIsInB1ciI6ImJsb2Jfa2V5In19--ceb055a160f52ccf4b9da2399c9751db48ae5354/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:37:22 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"84-300x300"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzNzZ1amJvM2UycXhwOWRheGNtd2hjcWs2NWV5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicHJvZi5hdmlmXCI7IGZpbGVuYW1lKj1VVEYtOCcncHJvZi5hdmlmIiwiY29udGVudF90eXBlIjoiaW1hZ2UvYXZpZiIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6NDA6MjEuNjM0WiIsInB1ciI6ImJsb2Jfa2V5In19--84bdd5a58e03da4f028b8c3c4fe9204073790956/prof.avif" for 127.0.0.1 at 2025-05-30 01:37:27 -0400
+Processing by ActiveStorage::DiskController#show as */*
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"prof"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
