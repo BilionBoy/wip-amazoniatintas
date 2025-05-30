@@ -28662,3 +28662,302 @@ Processing by LProdutosController#new as HTML
 Completed 200 OK in 28ms (Views: 21.0ms | ActiveRecord: 3.4ms (2 queries, 0 cached) | GC: 2.4ms)
 
 
+Started POST "/l_produtos" for 127.0.0.1 at 2025-05-30 00:45:28 -0400
+Processing by LProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "l_produto"=>{"titulo"=>"Tinta Acrílica Premium", "l_categoria_id"=>"1", "descricao"=>"Tinta Acrílica Premium", "preco"=>"289.90", "quantidade_estoque"=>"23", "foto_produto"=>#<ActionDispatch::Http::UploadedFile:0x0000744248a9e8f0 @tempfile=#<Tempfile:/tmp/RackMultipart20250530-24924-drkoqr.png>, @content_type="image/png", @original_filename="84-300x300.png", @headers="Content-Disposition: form-data; name=\"l_produto[foto_produto]\"; filename=\"84-300x300.png\"\r\nContent-Type: image/png\r\n">}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mLProduto Create (0.3ms)[0m  [1m[32mINSERT INTO "l_produtos" ("l_categoria_id", "titulo", "descricao", "preco", "quantidade_estoque", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["l_categoria_id", 1], ["titulo", "Tinta Acrílica Premium"], ["descricao", "Tinta Acrílica Premium"], ["preco", "289.9"], ["quantidade_estoque", 23], ["deleted_at", nil], ["created_at", "2025-05-30 04:45:28.284617"], ["updated_at", "2025-05-30 04:45:28.284617"]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "7rmi5hdy9uizc6j17k5wvtrtzzbb"], ["filename", "84-300x300.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 46609], ["checksum", "ooDKKjsl7BeAJfJzM2GQIw=="], ["created_at", "2025-05-30 04:45:28.301476"]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "foto_produto"], ["record_type", "LProduto"], ["record_id", 2], ["blob_id", 1], ["created_at", "2025-05-30 04:45:28.304032"]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mLProduto Update (0.3ms)[0m  [1m[33mUPDATE "l_produtos" SET "updated_at" = $1 WHERE "l_produtos"."id" = $2[0m  [["updated_at", "2025-05-30 04:45:28.306175"], ["id", 2]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: 7rmi5hdy9uizc6j17k5wvtrtzzbb (checksum: ooDKKjsl7BeAJfJzM2GQIw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5903f1dd-0613-4aa6-8757-db2584432192) to Async(default) with arguments: #<GlobalID:0x00007442488f8898 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/l_produtos
+Completed 302 Found in 71ms (ActiveRecord: 8.3ms (8 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 00:45:28 -0400
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192] Performing ActiveStorage::AnalyzeJob (Job ID: 5903f1dd-0613-4aa6-8757-db2584432192) from Async(default) enqueued at 2025-05-30T04:45:28.329684276Z with arguments: #<GlobalID:0x000074424892df98 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/1>>
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (37.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (27.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mLProduto Load (3.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (1.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  [1m[36mCACHE LCategoria Load (0.0ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 25.7ms | GC: 1.6ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: 7rmi5hdy9uizc6j17k5wvtrtzzbb[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mActiveStorage::Blob Update (3.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":300,\"height\":300,\"analyzed\":true}"], ["id", 1]]
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | GC: 2.5ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 1]]
+Completed 200 OK in 134ms (Views: 46.8ms | ActiveRecord: 69.4ms (5 queries, 1 cached) | GC: 10.6ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mLProduto Load (0.4ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mLProduto Update (0.5ms)[0m  [1m[33mUPDATE "l_produtos" SET "updated_at" = $1 WHERE "l_produtos"."id" = $2[0m  [["updated_at", "2025-05-30 04:45:28.524175"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192]   [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5903f1dd-0613-4aa6-8757-db2584432192] Performed ActiveStorage::AnalyzeJob (Job ID: 5903f1dd-0613-4aa6-8757-db2584432192) from Async(default) in 190.54ms
+Started DELETE "/l_produtos/1" for 127.0.0.1 at 2025-05-30 00:45:55 -0400
+Processing by LProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:48:in `set_l_produto'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mLProduto Destroy (0.3ms)[0m  [1m[31mDELETE FROM "l_produtos" WHERE "l_produtos"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+Redirected to http://127.0.0.1:3000/l_produtos
+Completed 302 Found in 15ms (ActiveRecord: 4.2ms (4 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 00:45:55 -0400
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_produtos/2/edit" for 127.0.0.1 at 2025-05-30 00:45:57 -0400
+Processing by LProdutosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:48:in `set_l_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/edit.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.4ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias"[0m
+  ↳ app/views/l_produtos/_form.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/_form.html.erb:32
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/_form.html.erb:32
+  Rendered l_produtos/_form.html.erb (Duration: 30.9ms | GC: 14.4ms)
+  Rendered l_produtos/edit.html.erb within layouts/application (Duration: 31.5ms | GC: 14.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | GC: 14.4ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.3ms (5 queries, 0 cached) | GC: 14.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `remove_foto_produto' for an instance of LProduto):
+
+Causes:
+NoMethodError (undefined method `remove_foto_produto' for an instance of LProduto)
+    37:             <p class="mb-1 text-muted">Imagem atual:</p>
+    38:             <%= image_tag url_for(f.object.foto_produto), alt: "Imagem do Produto", size: "150x150", class: "img-thumbnail mb-2" %>
+    39:             <div class="form-check mb-3">
+    40:               <%= f.check_box :remove_foto_produto, { class: 'form-check-input' }, '1', '0' %>
+    41:               <%= f.label :remove_foto_produto, "Remover imagem atual", class: 'form-check-label' %>
+    42:             </div>
+    43:           <% end %>
+  
+app/views/l_produtos/_form.html.erb:40
+app/views/l_produtos/_form.html.erb:5
+app/views/l_produtos/edit.html.erb:1
+Started GET "/l_produtos/new" for 127.0.0.1 at 2025-05-30 00:48:47 -0400
+Processing by LProdutosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.4ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias"[0m
+  ↳ app/views/l_produtos/_form.html.erb:20
+  Rendered l_produtos/_form.html.erb (Duration: 20.6ms | GC: 0.8ms)
+  Rendered l_produtos/new.html.erb within layouts/application (Duration: 21.2ms | GC: 0.8ms)
+  Rendered shared/_navbar.html.erb (Duration: 4.5ms | GC: 3.3ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | GC: 10.9ms)
+Completed 200 OK in 63ms (Views: 35.2ms | ActiveRecord: 8.3ms (2 queries, 0 cached) | GC: 12.8ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 00:48:49 -0400
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 3.2ms | GC: 2.6ms)
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 47.0ms | GC: 35.7ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | GC: 44.2ms)
+Completed 200 OK in 77ms (Views: 59.8ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 55.7ms)
+
+
+Started GET "/l_produtos/new" for 127.0.0.1 at 2025-05-30 00:48:50 -0400
+Processing by LProdutosController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias"[0m
+  ↳ app/views/l_produtos/_form.html.erb:20
+  Rendered l_produtos/_form.html.erb (Duration: 8.5ms | GC: 1.1ms)
+  Rendered l_produtos/new.html.erb within layouts/application (Duration: 8.8ms | GC: 1.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.6ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 1.5ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 2.8ms)
+
+
+Started POST "/l_produtos" for 127.0.0.1 at 2025-05-30 00:49:01 -0400
+Processing by LProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "l_produto"=>{"titulo"=>"Tinta Acrílica Premium", "l_categoria_id"=>"4", "descricao"=>"23232", "preco"=>"232", "quantidade_estoque"=>"23", "foto_produto"=>#<ActionDispatch::Http::UploadedFile:0x00007442490b0608 @tempfile=#<Tempfile:/tmp/RackMultipart20250530-24924-4ll9db.jpeg>, @content_type="image/jpeg", @original_filename="cat11.jpeg", @headers="Content-Disposition: form-data; name=\"l_produto[foto_produto]\"; filename=\"cat11.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "button"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mLProduto Create (0.3ms)[0m  [1m[32mINSERT INTO "l_produtos" ("l_categoria_id", "titulo", "descricao", "preco", "quantidade_estoque", "deleted_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["l_categoria_id", 4], ["titulo", "Tinta Acrílica Premium"], ["descricao", "23232"], ["preco", "232.0"], ["quantidade_estoque", 23], ["deleted_at", nil], ["created_at", "2025-05-30 04:49:01.280873"], ["updated_at", "2025-05-30 04:49:01.280873"]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "lyurhcoyrhck9c72myt7n6hhakw0"], ["filename", "cat11.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 47350], ["checksum", "SRavym1nCfiFycywa1z2Cw=="], ["created_at", "2025-05-30 04:49:01.294441"]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "foto_produto"], ["record_type", "LProduto"], ["record_id", 3], ["blob_id", 2], ["created_at", "2025-05-30 04:49:01.296579"]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mLProduto Update (0.2ms)[0m  [1m[33mUPDATE "l_produtos" SET "updated_at" = $1 WHERE "l_produtos"."id" = $2[0m  [["updated_at", "2025-05-30 04:49:01.298924"], ["id", 3]]
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: lyurhcoyrhck9c72myt7n6hhakw0 (checksum: SRavym1nCfiFycywa1z2Cw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 6f438163-2516-4aef-9303-c4aee9623c7f) to Async(default) with arguments: #<GlobalID:0x00007442488cbd20 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/2>>
+[ActiveJob] ↳ app/controllers/l_produtos_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/l_produtos
+Completed 302 Found in 43ms (ActiveRecord: 9.2ms (8 queries, 0 cached) | GC: 3.4ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 00:49:01 -0400
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f] Performing ActiveStorage::AnalyzeJob (Job ID: 6f438163-2516-4aef-9303-c4aee9623c7f) from Async(default) enqueued at 2025-05-30T04:49:01.307238435Z with arguments: #<GlobalID:0x00007442488e7160 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: lyurhcoyrhck9c72myt7n6hhakw0[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by LProdutosController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mActiveStorage::Blob Update (5.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":696,\"height\":663,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."id" = $1[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mLProduto Update (0.7ms)[0m  [1m[33mUPDATE "l_produtos" SET "updated_at" = $1 WHERE "l_produtos"."id" = $2[0m  [["updated_at", "2025-05-30 04:49:01.335445"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f]   [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f438163-2516-4aef-9303-c4aee9623c7f] Performed ActiveStorage::AnalyzeJob (Job ID: 6f438163-2516-4aef-9303-c4aee9623c7f) from Async(default) in 25.08ms
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 17.1ms | GC: 8.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | GC: 10.9ms)
+Completed 200 OK in 47ms (Views: 23.5ms | ActiveRecord: 5.3ms (5 queries, 0 cached) | GC: 10.9ms)
+
+
+Started DELETE "/l_produtos/3" for 127.0.0.1 at 2025-05-30 00:49:03 -0400
+Processing by LProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:48:in `set_l_produto'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mLProduto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "l_produtos" WHERE "l_produtos"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: a68cdf4f-0a3a-41b6-89ca-c68e230d5340) to Async(default) with arguments: #<GlobalID:0x000074424a2e3a28 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/2>>
+[ActiveJob] ↳ app/controllers/l_produtos_controller.rb:38:in `destroy'
+Redirected to http://127.0.0.1:3000/l_produtos
+Completed 302 Found in 23ms (ActiveRecord: 5.1ms (6 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 00:49:03 -0400
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340] Performing ActiveStorage::PurgeJob (Job ID: a68cdf4f-0a3a-41b6-89ca-c68e230d5340) from Async(default) enqueued at 2025-05-30T04:49:03.800891532Z with arguments: #<GlobalID:0x0000744249145870 @uri=#<URI::GID gid://amazonia-tintass/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mActiveStorage::Attachment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mActiveStorage::VariantRecord Load (0.9ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 2]]
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mActiveStorage::Attachment Load (5.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mActiveStorage::Blob Destroy (0.6ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+  [1m[36mLProduto Load (2.6ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLCategoria Load (1.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: lyurhcoyrhck9c72myt7n6hhakw0[0m
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 16.0ms | GC: 2.4ms)
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340] [36m  Disk Storage (0.9ms) [0m[31mDeleted files by key prefix: variants/lyurhcoyrhck9c72myt7n6hhakw0/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a68cdf4f-0a3a-41b6-89ca-c68e230d5340] Performed ActiveStorage::PurgeJob (Job ID: a68cdf4f-0a3a-41b6-89ca-c68e230d5340) from Async(default) in 33.99ms
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | GC: 2.4ms)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 4.7ms (4 queries, 0 cached) | GC: 2.4ms)
+
+
