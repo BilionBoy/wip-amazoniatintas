@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :l_produtos
   resources :l_categorias
   root 'home#index'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
