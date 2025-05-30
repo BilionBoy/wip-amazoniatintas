@@ -28627,3 +28627,38 @@ Processing by LProdutosController#index as HTML
 Completed 200 OK in 25ms (Views: 9.8ms | ActiveRecord: 0.8ms (4 queries, 0 cached) | GC: 13.3ms)
 
 
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 00:44:36 -0400
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 15.7ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 16.5ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/l_produtos/new" for 127.0.0.1 at 2025-05-30 00:44:38 -0400
+Processing by LProdutosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/new.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.4ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias"[0m
+  ↳ app/views/l_produtos/_form.html.erb:20
+  Rendered l_produtos/_form.html.erb (Duration: 19.4ms | GC: 2.1ms)
+  Rendered l_produtos/new.html.erb within layouts/application (Duration: 20.6ms | GC: 2.1ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | GC: 2.4ms)
+Completed 200 OK in 28ms (Views: 21.0ms | ActiveRecord: 3.4ms (2 queries, 0 cached) | GC: 2.4ms)
+
+
