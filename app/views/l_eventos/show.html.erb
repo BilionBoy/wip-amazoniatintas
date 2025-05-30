@@ -1,0 +1,37 @@
+<div class="container">
+  <%= render "shared/notice" %>
+  <div class="card border-0 shadow shadow-sm">
+    <div class="card-header border-0 d-flex justify-content-between">
+      <span class="fs-4">Visualizar L Evento</span>
+    </div>
+    <div class="card-body">
+      <div id="<%= dom_id @l_evento %>">
+          <p>
+            <strong>Titulo:</strong>
+            <%= @l_evento.titulo %>
+          </p>
+          <p>
+            <strong>Conteudo:</strong>
+            <%= @l_evento.conteudo %>
+          </p>
+          <p>
+            <strong>Data Evento:</strong>
+            <%= @l_evento.data_evento %>
+          </p>
+          <p>
+            <strong>L Categoria:</strong>
+            <%= @l_evento.l_categoria %>
+          </p>
+      </div>
+    </div>
+    <div class="card-footer border-0 d-flex justify-content-between">
+      <div>
+        <%= link_to edit_l_evento_path(@l_evento), class: "btn btn-primary" do %>
+        <i class="bi bi-pencil-square"></i> Editar
+        <% end %>
+        <%= link_to "Voltar", l_eventos_path, class: "btn btn-secondary" %>
+      </div>
+      <%= button_to "Deletar", @l_evento, method: :delete, class: "btn btn-outline-danger border-0" %>
+    </div>
+  </div>
+</div>

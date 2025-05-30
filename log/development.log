@@ -35786,3 +35786,316 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-05-30 11:56:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250530154440_create_titulos.rb
+
+
+):
+  
+activerecord (7.2.2.1) lib/active_record/migration.rb:756:in `check_pending_migrations'
+activerecord (7.2.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.2.1) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.15) lib/rack/method_override.rb:28:in `call'
+rack (3.1.15) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.15) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-05-30 11:56:58 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateTitulos (20250530154440)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE TABLE "titulos" ("id" bigserial primary key, "conteudo_text" character varying, "data_evento" timestamp(6), "l_categoria_id" bigint, "created_by" character varying, "updated_by" character varying, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE INDEX "index_titulos_on_l_categoria_id" ON "titulos" ("l_categoria_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250530154440') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-05-30 11:56:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | GC: 0.5ms)
+Completed 200 OK in 83ms (Views: 50.5ms | ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 11:56:59 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.2ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 24.7ms | GC: 11.3ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | GC: 11.8ms)
+Completed 200 OK in 78ms (Views: 28.1ms | ActiveRecord: 5.6ms (3 queries, 0 cached) | GC: 11.8ms)
+
+
+Started GET "/l_produtos" for 127.0.0.1 at 2025-05-30 11:57:00 -0400
+Processing by LProdutosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProduto Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_produtos"[0m
+  ↳ app/controllers/l_produtos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_produtos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_produtos/index.html.erb:26
+  [1m[36mLCategoria Load (1.5ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" WHERE "l_categorias"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/l_produtos/index.html.erb:43
+  Rendered l_produtos/index.html.erb within layouts/application (Duration: 30.3ms | GC: 0.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | GC: 0.9ms)
+Completed 200 OK in 42ms (Views: 27.1ms | ActiveRecord: 8.7ms (4 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 11:57:46 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.5ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.5ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1[0m  [["l_categoria_id", 1]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProfissional Load (0.3ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais"[0m
+  ↳ app/controllers/store_controller.rb:19:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/store/_features.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mLProduto Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.1ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  Rendered shared/store/_produtos.html.erb (Duration: 34.8ms | GC: 9.0ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mLProfissional Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/views/shared/store/_profissionals.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProfissional"], ["name", "foto_profissional"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:56
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_profissionals.html.erb:57
+  Rendered shared/store/_profissionals.html.erb (Duration: 7.3ms | GC: 0.4ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 46.9ms | GC: 9.4ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 49.3ms | GC: 9.4ms)
+Completed 200 OK in 80ms (Views: 43.0ms | ActiveRecord: 10.0ms (14 queries, 0 cached) | GC: 9.7ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 11:57:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 11:57:47 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 11:57:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be/tinta.webp" for 127.0.0.1 at 2025-05-30 11:57:47 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as WEBP
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be", "filename"=>"tinta"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (3.1ms) [0m[34mGenerated URL for file at key: m4xk7mry2l8qsu6hl9ngczjqfn7p (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJtNHhrN21yeTJsOHFzdTZobDluZ2N6anFmbjdwIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwidGludGEud2VicFwiOyBmaWxlbmFtZSo9VVRGLTgnJ3RpbnRhLndlYnAiLCJjb250ZW50X3R5cGUiOiJpbWFnZS93ZWJwIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wNS0zMFQxNjowMjo0Ny40MTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7301b71e5af5782cd9eac374a11cb340b150ec6/tinta.webp)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJtNHhrN21yeTJsOHFzdTZobDluZ2N6anFmbjdwIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwidGludGEud2VicFwiOyBmaWxlbmFtZSo9VVRGLTgnJ3RpbnRhLndlYnAiLCJjb250ZW50X3R5cGUiOiJpbWFnZS93ZWJwIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wNS0zMFQxNjowMjo0Ny40MTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7301b71e5af5782cd9eac374a11cb340b150ec6/tinta.webp
+Completed 302 Found in 17ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJtNHhrN21yeTJsOHFzdTZobDluZ2N6anFmbjdwIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwidGludGEud2VicFwiOyBmaWxlbmFtZSo9VVRGLTgnJ3RpbnRhLndlYnAiLCJjb250ZW50X3R5cGUiOiJpbWFnZS93ZWJwIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wNS0zMFQxNjowMjo0Ny40MTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7301b71e5af5782cd9eac374a11cb340b150ec6/tinta.webp" for 127.0.0.1 at 2025-05-30 11:57:47 -0400
+Processing by ActiveStorage::DiskController#show as WEBP
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"tinta"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTitulos (20250530154440)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "titulos"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250530154440'[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateLEventos (20250530160234)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "l_eventos" ("id" bigserial primary key, "titulo" character varying, "conteudo" text, "data_evento" timestamp(6), "l_categoria_id" bigint, "deleted_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_l_eventos_on_l_categoria_id" ON "l_eventos" ("l_categoria_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250530160234') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-05-30 12:03:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | GC: 0.0ms)
+Completed 200 OK in 82ms (Views: 40.2ms | ActiveRecord: 19.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_eventos" for 127.0.0.1 at 2025-05-30 12:03:15 -0400
+Processing by LEventosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLEvento Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_eventos"[0m
+  ↳ app/controllers/l_eventos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_eventos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered l_eventos/index.html.erb within layouts/application (Duration: 9.7ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 1.0ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 7.1ms (2 queries, 0 cached) | GC: 33.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `titulo_cont' for an instance of Ransack::Search):
+
+Causes:
+NoMethodError (undefined method `titulo_cont' for an instance of Ransack::Search)
+    4: <div class="card">
+    5:   <div class="card-header d-flex">
+    6:     <%= search_form_for @q, html: { class: "d-flex gap-2" , autocomplete: "off"} do |f| %>
+    7:       <%= f.search_field :titulo_cont, class: "form-control", placeholder: "Pesquisar" %>
+    8:       <%= f.button(type: 'submit', class: 'btn btn-info') { tag.i(class: 'ph-magnifying-glass') } %>
+    9:       <%= link_to  tag.i(class: 'ph-x-circle'), l_eventos_path, class: "btn btn-light" if params[:q] %>
+   10:       <% end %>
+  
+app/views/l_eventos/index.html.erb:7
+app/views/l_eventos/index.html.erb:6
+Started GET "/l_eventos" for 127.0.0.1 at 2025-05-30 12:03:24 -0400
+Processing by LEventosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLEvento Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_eventos"[0m
+  ↳ app/controllers/l_eventos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_eventos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered l_eventos/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `titulo_cont' for an instance of Ransack::Search):
+
+Causes:
+NoMethodError (undefined method `titulo_cont' for an instance of Ransack::Search)
+    4: <div class="card">
+    5:   <div class="card-header d-flex">
+    6:     <%= search_form_for @q, html: { class: "d-flex gap-2" , autocomplete: "off"} do |f| %>
+    7:       <%= f.search_field :titulo_cont, class: "form-control", placeholder: "Pesquisar" %>
+    8:       <%= f.button(type: 'submit', class: 'btn btn-info') { tag.i(class: 'ph-magnifying-glass') } %>
+    9:       <%= link_to  tag.i(class: 'ph-x-circle'), l_eventos_path, class: "btn btn-light" if params[:q] %>
+   10:       <% end %>
+  
+app/views/l_eventos/index.html.erb:7
+app/views/l_eventos/index.html.erb:6
+Started GET "/l_eventos" for 127.0.0.1 at 2025-05-30 12:03:26 -0400
+Processing by LEventosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLEvento Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_eventos"[0m
+  ↳ app/controllers/l_eventos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_eventos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLEvento Load (0.1ms)[0m  [1m[34mSELECT "l_eventos".* FROM "l_eventos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_eventos/index.html.erb:34
+  Rendered l_eventos/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.9ms)
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 3.3ms (3 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/l_eventos" for 127.0.0.1 at 2025-05-30 12:03:26 -0400
+Processing by LEventosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLEvento Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_eventos"[0m
+  ↳ app/controllers/l_eventos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_eventos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLEvento Load (0.7ms)[0m  [1m[34mSELECT "l_eventos".* FROM "l_eventos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_eventos/index.html.erb:34
+  Rendered l_eventos/index.html.erb within layouts/application (Duration: 9.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | GC: 8.3ms)
+Completed 200 OK in 40ms (Views: 28.9ms | ActiveRecord: 2.1ms (3 queries, 0 cached) | GC: 8.3ms)
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_05_30_154440) do
+ActiveRecord::Schema[7.2].define(version: 2025_05_30_160234) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,17 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_30_154440) do
     t.index ["l_segmento_id"], name: "index_l_categorias_on_l_segmento_id"
   end
 
+  create_table "l_eventos", force: :cascade do |t|
+    t.string "titulo"
+    t.text "conteudo"
+    t.datetime "data_evento"
+    t.bigint "l_categoria_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["l_categoria_id"], name: "index_l_eventos_on_l_categoria_id"
+  end
+
   create_table "l_produtos", force: :cascade do |t|
     t.bigint "l_categoria_id"
     t.string "titulo"
@@ -91,25 +102,13 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_30_154440) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "titulos", force: :cascade do |t|
-    t.string "conteudo_text"
-    t.datetime "data_evento"
-    t.bigint "l_categoria_id"
-    t.string "created_by"
-    t.string "updated_by"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["l_categoria_id"], name: "index_titulos_on_l_categoria_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "nome"
+    t.string "nome", null: false
     t.bigint "l_tipo_usuario_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

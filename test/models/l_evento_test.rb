@@ -1,6 +1,6 @@
 require "test_helper"
 
-class TituloTest < ActiveSupport::TestCase
+class LEventoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

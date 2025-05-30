@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :titulos
+  resources :l_eventos
   root 'home#index'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
   

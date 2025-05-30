@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class Titulo < ApplicationRecord
+class LEvento < ApplicationRecord
   # Adicione aqui quaisquer métodos ou validações padrão para seus modelos
 end
