@@ -29997,3 +29997,462 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:13:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | GC: 26.3ms)
+Completed 200 OK in 136ms (Views: 85.1ms | ActiveRecord: 23.1ms (1 query, 0 cached) | GC: 26.3ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLProduto Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.1ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 1], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  [1m[36mLProduto Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:37
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" = $1 LIMIT $2[0m  [["l_categoria_id", 4], ["LIMIT", 8]]
+  ↳ app/views/shared/store/_produtos.html.erb:39:in `each_with_index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "LProduto"], ["name", "foto_produto"], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/store/_produtos.html.erb:49
+  Rendered shared/store/_produtos.html.erb (Duration: 34.4ms | GC: 1.7ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 35.5ms | GC: 1.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 38.3ms | GC: 2.0ms)
+Completed 200 OK in 102ms (Views: 31.5ms | ActiveRecord: 14.6ms (14 queries, 0 cached) | GC: 22.3ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:14:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:14:16 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8bd835da4167fef8dd3c8c81af2a40b77c5a42be", "filename"=>"84-300x300"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 7rmi5hdy9uizc6j17k5wvtrtzzbb (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6MTk6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--9c40e23d6657a645b9b8dafde7d8144c9f1337cf/84-300x300.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6MTk6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--9c40e23d6657a645b9b8dafde7d8144c9f1337cf/84-300x300.png
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3cm1pNWhkeTl1aXpjNmoxN2s1d3Z0cnR6emJiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiODQtMzAweDMwMC5wbmdcIjsgZmlsZW5hbWUqPVVURi04Jyc4NC0zMDB4MzAwLnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDUtMzBUMDU6MTk6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--9c40e23d6657a645b9b8dafde7d8144c9f1337cf/84-300x300.png" for 127.0.0.1 at 2025-05-30 01:14:16 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"84-300x300"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:14:21 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 3.2ms | GC: 0.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.5ms | GC: 0.7ms)
+Completed 200 OK in 43ms (Views: 6.6ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 7.8ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:14:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:14:22 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:14:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.5ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 1.1ms | GC: 0.8ms)
+  Rendered layout layouts/home_application.erb (Duration: 4.0ms | GC: 0.8ms)
+Completed 200 OK in 89ms (Views: 5.2ms | ActiveRecord: 7.4ms (4 queries, 0 cached) | GC: 52.2ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:14:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 5.2ms | GC: 4.2ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 1.7ms | GC: 0.7ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 9.2ms | GC: 5.8ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 1.4ms | GC: 1.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 19.1ms | GC: 13.1ms)
+Completed 200 OK in 54ms (Views: 21.5ms | ActiveRecord: 7.1ms (4 queries, 0 cached) | GC: 15.9ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.6ms | GC: 0.6ms)
+Completed 200 OK in 96ms (Views: 6.4ms | ActiveRecord: 6.4ms (4 queries, 0 cached) | GC: 57.4ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 7.0ms | ActiveRecord: 6.4ms (4 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:15:56 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 7.0ms | GC: 0.6ms)
+Completed 200 OK in 55ms (Views: 7.9ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 12.4ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:15:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:15:57 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:15:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:16:04 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.5ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 4.3ms | ActiveRecord: 10.1ms (4 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:16:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:16:05 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:16:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 7.7ms | ActiveRecord: 6.2ms (4 queries, 0 cached) | GC: 7.0ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:16:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.3ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 1.8ms | GC: 0.7ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 4.3ms | GC: 0.7ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.4ms | GC: 0.7ms)
+Completed 200 OK in 44ms (Views: 7.9ms | ActiveRecord: 8.2ms (4 queries, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:16:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.3ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.5ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 4.4ms | ActiveRecord: 9.7ms (4 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:17:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.6ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 18.7ms | GC: 5.3ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 1.3ms (4 queries, 0 cached) | GC: 5.3ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:17:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:17:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/store_controller.rb:6:in `index'
+  [1m[36mLCategoria Load (0.1ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  [1m[36mLProduto Load (0.2ms)[0m  [1m[34mSELECT "l_produtos".* FROM "l_produtos" WHERE "l_produtos"."l_categoria_id" IN ($1, $2, $3, $4)[0m  [["l_categoria_id", 1], ["l_categoria_id", 2], ["l_categoria_id", 3], ["l_categoria_id", 4]]
+  ↳ app/controllers/store_controller.rb:9:in `index'
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 7.5ms | ActiveRecord: 6.6ms (4 queries, 0 cached) | GC: 8.1ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 01:18:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  

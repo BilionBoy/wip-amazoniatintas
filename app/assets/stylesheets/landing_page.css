@@ -2004,26 +2004,6 @@ a:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.professional-certified-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: rgba(0, 166, 81, 0.9);
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 50px;
-  font-size: 0.8em;
-  font-weight: 600;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.professional-certified-badge i {
-  color: #ffd700;
-}
-
 .professional-header {
   position: relative;
 }
