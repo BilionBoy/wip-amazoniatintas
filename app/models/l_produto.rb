@@ -3,6 +3,7 @@
 class LProduto < ApplicationRecord
   # Adicione aqui quaisquer métodos ou validações padrão para seus modelos
   belongs_to :l_categoria
+  has_one_attached :foto_produto
 
   validates :titulo,             presence: true
   validates :descricao,          presence: true
