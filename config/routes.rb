@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :l_segmentos
   resources :l_produtos
   resources :l_categorias
+  resources :l_profissionais
   
   get 'up' => 'rails/health#show', as: :rails_health_check
 end

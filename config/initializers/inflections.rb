@@ -5,5 +5,6 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'l_segmento',     'l_segmentos'
   inflect.irregular 'l_categoria',    'l_categorias' 
   inflect.irregular 'l_produto',      'l_produtos'
+  inflect.irregular 'l_profissional', 'l_profissionais'
 
 end
