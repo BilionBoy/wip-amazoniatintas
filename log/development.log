@@ -26974,3 +26974,259 @@ FOREIGN KEY ("blob_id")
   [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4240433367487275840)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-05-30 00:18:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-30 00:18:51 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 22.4ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 89.9ms | GC: 27.7ms)
+Completed 200 OK in 125ms (Views: 98.2ms | ActiveRecord: 8.6ms (0 queries, 0 cached) | GC: 27.7ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-30 00:18:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/password/new" for 127.0.0.1 at 2025-05-30 00:18:57 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_error_messages.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/passwords/new.html.erb within layouts/devise_application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-30 00:18:58 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  [1m[36mLTipoUsuario Load (1.2ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios"[0m
+  ↳ app/views/users/registrations/new.html.erb:24:in `map'
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 20.0ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 21.8ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-30 00:19:00 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  [1m[36mLTipoUsuario Load (0.4ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios"[0m
+  ↳ app/views/users/registrations/new.html.erb:24:in `map'
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-05-30 00:19:00 -0400
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  [1m[36mLTipoUsuario Load (0.8ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios"[0m
+  ↳ app/views/users/registrations/new.html.erb:24:in `map'
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 14.2ms | GC: 7.7ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 16.6ms | GC: 8.6ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 8.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-05-30 00:19:12 -0400
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"teste", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "l_tipo_usuario_id"=>"1"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/devise_application
+  [1m[36mLTipoUsuario Load (0.3ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios"[0m
+  ↳ app/views/users/registrations/new.html.erb:24:in `map'
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise_application (Duration: 9.2ms | GC: 0.4ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 10.5ms | GC: 0.4ms)
+Completed 422 Unprocessable Content in 191ms (Views: 10.8ms | ActiveRecord: 3.5ms (2 queries, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-05-30 00:19:16 -0400
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/devise_application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/devise_application
+  Rendered shared/_notice.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered /home/dhiogo/.asdf/installs/ruby/3.3.5/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise_application (Duration: 2.8ms | GC: 0.2ms)
+  Rendered layout layouts/devise_application.html.erb (Duration: 4.3ms | GC: 0.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-05-30 00:19:21 -0400
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mLTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios" WHERE "l_tipo_usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 185ms (ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 00:19:22 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 00:19:22 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | GC: 4.8ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 4.8ms)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 00:19:38 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.5ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-30 00:19:39 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.2ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/l_tipo_usuarios" for 127.0.0.1 at 2025-05-30 00:19:41 -0400
+Processing by LTipoUsuariosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLTipoUsuario Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_tipo_usuarios"[0m
+  ↳ app/controllers/l_tipo_usuarios_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLTipoUsuario Load (0.2ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_tipo_usuarios/index.html.erb:22
+  Rendered l_tipo_usuarios/index.html.erb within layouts/application (Duration: 6.4ms | GC: 0.8ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.8ms)
+Completed 200 OK in 29ms (Views: 9.7ms | ActiveRecord: 2.3ms (3 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/l_segmentos" for 127.0.0.1 at 2025-05-30 00:19:42 -0400
+Processing by LSegmentosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLSegmento Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_segmentos"[0m
+  ↳ app/controllers/l_segmentos_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_segmentos/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLSegmento Load (0.2ms)[0m  [1m[34mSELECT "l_segmentos".* FROM "l_segmentos" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_segmentos/index.html.erb:25
+  Rendered l_segmentos/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 3.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_categorias" for 127.0.0.1 at 2025-05-30 00:19:42 -0400
+Processing by LCategoriasController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLCategoria Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_categorias"[0m
+  ↳ app/controllers/l_categorias_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_categorias/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLCategoria Load (0.2ms)[0m  [1m[34mSELECT "l_categorias".* FROM "l_categorias" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_categorias/index.html.erb:24
+  Rendered l_categorias/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 1.3ms)
+Completed 200 OK in 20ms (Views: 9.9ms | ActiveRecord: 2.7ms (3 queries, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/l_tipo_usuarios" for 127.0.0.1 at 2025-05-30 00:19:43 -0400
+Processing by LTipoUsuariosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLTipoUsuario Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_tipo_usuarios"[0m
+  ↳ app/controllers/l_tipo_usuarios_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_tipo_usuarios/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mLTipoUsuario Load (0.1ms)[0m  [1m[34mSELECT "l_tipo_usuarios".* FROM "l_tipo_usuarios" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_tipo_usuarios/index.html.erb:22
+  Rendered l_tipo_usuarios/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.2ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2025-05-30 00:19:45 -0400
+Processing by StoreController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/home_application.erb
+  Rendering store/index.html.erb within layouts/home_application
+  Rendered shared/store/_hero.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/store/_features.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/store/_produtos.html.erb (Duration: 2.6ms | GC: 0.4ms)
+  Rendered shared/store/_sobre.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered shared/store/_unidades.html.erb (Duration: 0.9ms | GC: 0.5ms)
+  Rendered shared/store/_profissionals.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered store/index.html.erb within layouts/home_application (Duration: 10.1ms | GC: 0.9ms)
+  Rendered shared/store/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/home_application.erb (Duration: 12.9ms | GC: 0.9ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/store/script.js" for 127.0.0.1 at 2025-05-30 00:19:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/script.js"):
+  
+Started GET "/images/splash-blue.png" for 127.0.0.1 at 2025-05-30 00:19:45 -0400
+Started GET "/images/paint-splash-floor.png" for 127.0.0.1 at 2025-05-30 00:19:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
+  
+Started GET "/store/favicon.ico" for 127.0.0.1 at 2025-05-30 00:19:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/store/favicon.ico"):
+  
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
