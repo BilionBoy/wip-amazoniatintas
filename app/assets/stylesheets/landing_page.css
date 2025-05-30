@@ -2449,4 +2449,53 @@ a:hover {
   }
 }
 
+/* CSS para garantir que a navegação funcione */
+.categoria-produtos {
+  display: none;
+  animation: fadeIn 0.3s ease-in;
+}
 
+.categoria-produtos.active {
+  display: block !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-pills .nav-link {
+  border-radius: 25px;
+  margin: 0 5px;
+  padding: 10px 20px;
+  color: #666;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: none;
+}
+
+.nav-pills .nav-link:hover {
+  color: #00a651;
+  border-color: #00a651;
+  background-color: transparent;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #00a651 !important;
+  border-color: #00a651 !important;
+  color: white !important;
+}
+
+.categoria-btn {
+  border: none;
+  outline: none;
+}
+
+.categoria-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 166, 81, 0.25);
+}

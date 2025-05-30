@@ -15,4 +15,12 @@ class LProduto < ApplicationRecord
   def purge_foto_produto
     foto_produto.purge
   end
+
+  def preco_formatado
+    "R$ #{preco.to_f.round(2).to_s.gsub('.', ',')}"
+  end
+  
+  def em_estoque?
+    quantidade_estoque.to_i > 0
+  end
 end
