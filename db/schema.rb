@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_30_042326) do
     t.bigint "l_categoria_id"
     t.string "titulo"
     t.text "descricao"
-    t.decimal "preco"
+    t.decimal "preco", precision: 10, scale: 2
     t.integer "quantidade_estoque"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
