@@ -51,7 +51,7 @@ class LProfissionaisController < ApplicationController
 
   def l_profissional_params
     permitted_attributes = LProfissional.column_names.reject { |col| ['deleted_at', 'created_by', 'updated_by'].include?(col) }
-    params.require(:l_profissional).permit(permitted_attributes.map(&:to_sym))
+    params.require(:l_profissional).permit(permitted_attributes.map(&:to_sym), :foto_profissional)
   end
 
   def handle_not_found

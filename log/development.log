@@ -30880,3 +30880,32 @@ ActionController::RoutingError (No route matches [GET] "/images/splash-blue.png"
   
 ActionController::RoutingError (No route matches [GET] "/images/paint-splash-floor.png"):
   
+Started GET "/" for 127.0.0.1 at 2025-05-30 01:29:24 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/l_profissionais" for 127.0.0.1 at 2025-05-30 01:29:25 -0400
+Processing by LProfissionaisController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLProfissional Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "l_profissionais"[0m
+  ↳ app/controllers/l_profissionais_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering l_profissionais/index.html.erb within layouts/application
+  Rendered shared/_context_nav.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLProfissional Load (0.4ms)[0m  [1m[34mSELECT "l_profissionais".* FROM "l_profissionais" LIMIT $1 OFFSET $2[0m  [["LIMIT", 6], ["OFFSET", 0]]
+  ↳ app/views/l_profissionais/index.html.erb:31
+  Rendered l_profissionais/index.html.erb within layouts/application (Duration: 9.0ms | GC: 3.9ms)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/sidebar/_sidebar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 3.9ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 3.9ms)
+
+
