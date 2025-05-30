@@ -9,159 +9,155 @@
         seu ambiente com qualidade, segurança e garantia.
       </p>
     </div>
-    <!-- Filter Controls -->
-    <div class="professionals-filter" data-aos="fade-up">
-      <ul class="nav nav-pills justify-content-center" id="professionals-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">
-            <i class="fas fa-users me-2"></i>Todos
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="residential-tab" data-bs-toggle="pill" data-bs-target="#residential" type="button" role="tab" aria-controls="residential" aria-selected="false">
-            <i class="fas fa-home me-2"></i>Residencial
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="commercial-tab" data-bs-toggle="pill" data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">
-            <i class="fas fa-building me-2"></i>Comercial
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="industrial-tab" data-bs-toggle="pill" data-bs-target="#industrial" type="button" role="tab" aria-controls="industrial" aria-selected="false">
-            <i class="fas fa-industry me-2"></i>Industrial
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="decorative-tab" data-bs-toggle="pill" data-bs-target="#decorative" type="button" role="tab" aria-controls="decorative" aria-selected="false">
-            <i class="fas fa-paint-brush me-2"></i>Efeitos Decorativos
-          </button>
-        </li>
-      </ul>
-    </div>
-    <!-- Professionals Cards -->
-    <div class="tab-content" id="professionals-tabContent" data-aos="fade-up" data-aos-delay="100">
-      <!-- All Professionals Tab -->
-      <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-        <div class="row g-4">
-          <!-- Professional Card 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="professional-card">
-              <div class="professional-header">
-                <div class="professional-image">
-                  <%= image_tag "https://img.freepik.com/fotos-premium/sorriso-de-retrato-e-homem-de-negocios-funcionario-profissional-ou-advogado-de-terno-com-mentalidade-de-carreira-e-confianca-no-bokeh-rosto-de-um-advogado-de-pessoa-juridica-ou-agente-dos-eua-para-trabalho-ou-empresa_590464-181293.jpg", alt: "Carlos Silva", class: "img-fluid", loading: "lazy" %>
-                </div>
-                <div class="professional-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>4.8</span>
-                </div>
-              </div>
-              <div class="professional-body">
-                <h3 class="professional-name">Carlos Silva</h3>
-                <p class="professional-title">Pintor Residencial e Comercial</p>
-                <div class="professional-experience">
-                </div>
-                <div class="professional-description">
-                  <p>Especialista em pintura residencial e comercial com mais de 12 anos de experiência. Trabalho com técnicas modernas e acabamento impecável.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Professional Card 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="professional-card">
-              <div class="professional-header">
-                <div class="professional-image">
-                  <%= image_tag "https://img.freepik.com/fotos-premium/mulher-de-negocios-e-bracos-em-um-retrato-serio-no-escritorio-para-carreira-como-empresario-na-empresa-foco-profissional-feminino-e-rosto-com-braco-como-lider-em-um-local-de-trabalho-para-trabalho-com-funcionario_590464-183765.jpg", alt: "Ana Oliveira", class: "img-fluid", loading: "lazy" %>
-                </div>
-                <div class="professional-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>5.0</span>
-                </div>
-              </div>
-              <div class="professional-body">
-                <h3 class="professional-name">Ana Oliveira</h3>
-                <p class="professional-title">Especialista em Efeitos Decorativos</p>
-                <div class="professional-description">
-                  <p>Especialista em técnicas decorativas e efeitos especiais. Cimento queimado, marmorização, pátina e outros efeitos exclusivos.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Professional Card 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="professional-card">
-              <div class="professional-header">
-                <div class="professional-image">
-                  <%= image_tag "https://media.gettyimages.com/id/1645521990/pt/v%C3%ADdeo/face-happy-lawyer-and-man-in-office-corporate-company-and-workplace-portrait-smile-and.jpg?s=640x640&k=20&c=TEJB58PJFlPSZye8_OeXfl9th16eqDiK-01diWp4PQM=", alt: "Rodrigo Santos", class: "img-fluid", loading: "lazy" %>
-                </div>
-                <div class="professional-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span>4.9</span>
-                </div>
-              </div>
-              <div class="professional-body">
-                <h3 class="professional-name">Rodrigo Santos</h3>
-                <p class="professional-title">Pintor Industrial e Comercial</p>
-                <div class="professional-description">
-                  <p>Especializado em pintura industrial, pisos epóxi e grandes superfícies comerciais. Atendimento a normas técnicas e de segurança.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <% if @profissionais.any? %>
+      <!-- Filter Controls -->
+      <div class="professionals-filter" data-aos="fade-up">
+        <ul class="nav nav-pills justify-content-center" id="professionals-tab">
+          <li class="nav-item">
+            <button class="nav-link especialidade-btn active" data-especialidade="todos" onclick="mostrarEspecialidade('todos')">
+              <i class="fas fa-users me-2"></i>Todos (<%= @profissionais_por_especialidade['todos'].count %>)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link especialidade-btn" data-especialidade="residencial" onclick="mostrarEspecialidade('residencial')">
+              <i class="fas fa-home me-2"></i>Residencial (<%= @profissionais_por_especialidade['residencial'].count %>)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link especialidade-btn" data-especialidade="comercial" onclick="mostrarEspecialidade('comercial')">
+              <i class="fas fa-building me-2"></i>Comercial (<%= @profissionais_por_especialidade['comercial'].count %>)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link especialidade-btn" data-especialidade="industrial" onclick="mostrarEspecialidade('industrial')">
+              <i class="fas fa-industry me-2"></i>Industrial (<%= @profissionais_por_especialidade['industrial'].count %>)
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link especialidade-btn" data-especialidade="decorativo" onclick="mostrarEspecialidade('decorativo')">
+              <i class="fas fa-paint-brush me-2"></i>Efeitos Decorativos (<%= @profissionais_por_especialidade['decorativo'].count %>)
+            </button>
+          </li>
+        </ul>
       </div>
-      <!-- Residential Tab -->
-      <div class="tab-pane fade" id="residential" role="tabpanel" aria-labelledby="residential-tab">
-        <div class="row g-4">
-          <!-- Show only residential professionals here -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="professional-card">
-              <div class="professional-header">
-                <div class="professional-image">
-                  <%= image_tag "https://img.freepik.com/fotos-premium/sorriso-de-retrato-e-homem-de-negocios-funcionario-profissional-ou-advogado-de-terno-com-mentalidade-de-carreira-e-confianca-no-bokeh-rosto-de-um-advogado-de-pessoa-juridica-ou-agente-dos-eua-para-trabalho-ou-empresa_590464-181293.jpg", alt: "Carlos Silva", class: "img-fluid", loading: "lazy" %>
-                </div>
-                <div class="professional-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>4.8</span>
-                </div>
-              </div>
-              <div class="professional-body">
-                <h3 class="professional-name">Carlos Silva</h3>
-                <p class="professional-title">Pintor Residencial e Comercial</p>
-                <div class="professional-experience">
-                  <div class="experience-item">
-                    <span class="experience-label">Experiência</span>
-                    <div class="experience-bar">
-                      <div class="experience-progress" style="width: 90%"></div>
+      <!-- Professionals Cards Container -->
+      <div id="profissionais-container" data-aos="fade-up" data-aos-delay="100">
+        <% @profissionais_por_especialidade.each do |especialidade, profissionais| %>
+          <div class="especialidade-profissionais <%= 'active' if especialidade == 'todos' %>" 
+               id="especialidade-<%= especialidade %>-profissionais" 
+               data-especialidade="<%= especialidade %>">
+            <% if profissionais.any? %>
+              <div class="row g-4">
+                <% profissionais.each_with_index do |profissional, index| %>
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<%= (index + 1) * 100 %>">
+                    <div class="professional-card">
+                      <div class="professional-header">
+                        <div class="professional-image">
+                          <% if profissional.foto_profissional.attached? %>
+                            <%= image_tag profissional.foto_profissional, 
+                                alt: profissional.nome, 
+                                class: "img-fluid professional-img", 
+                                loading: "lazy" %>
+                          <% else %>
+                            <%= image_tag "https://via.placeholder.com/300x300?text=#{profissional.nome}", 
+                                alt: profissional.nome, 
+                                class: "img-fluid professional-img", 
+                                loading: "lazy" %>
+                          <% end %>
+                        </div>
+                        <div class="professional-rating">
+                          <% 5.times do |i| %>
+                            <% if i < 4 %>
+                              <i class="fas fa-star"></i>
+                            <% elsif i == 4 %>
+                              <i class="fas fa-star-half-alt"></i>
+                            <% else %>
+                              <i class="far fa-star"></i>
+                            <% end %>
+                          <% end %>
+                          <span>4.8</span>
+                        </div>
+                      </div>
+                      <div class="professional-body">
+                        <h3 class="professional-name"><%= profissional.nome %></h3>
+                        <p class="professional-title"><%= profissional.especialidade %></p>
+                        <div class="professional-description">
+                          <p><%= profissional.descricao %></p>
+                        </div>
+                        <div class="professional-actions">
+                          <%= link_to "#", class: "btn btn-primary" do %>
+                            <i class="fas fa-calendar me-1"></i>Contatar
+                          <% end %>
+                        </div>
+                      </div>
                     </div>
-                    <span class="experience-value">12 anos</span>
                   </div>
-                </div>
-                <div class="professional-description">
-                  <p>Especialista em pintura residencial e comercial com mais de 12 anos de experiência. Trabalho com técnicas modernas e acabamento impecável.</p>
-                </div>
+                <% end %>
               </div>
-            </div>
+            <% else %>
+              <div class="text-center py-5">
+                <i class="fas fa-user-slash fa-3x text-muted mb-3"></i>
+                <h4 class="text-muted">Nenhum profissional encontrado</h4>
+                <p class="text-muted">Não há profissionais disponíveis nesta especialidade no momento.</p>
+              </div>
+            <% end %>
           </div>
-        </div>
+        <% end %>
       </div>
-    </div>
+    <% else %>
+      <div class="text-center py-5">
+        <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+        <h4 class="text-muted">Nenhum profissional cadastrado</h4>
+        <p class="text-muted">Não há profissionais cadastrados no momento.</p>
+      </div>
+    <% end %>
   </div>
 </section>
+<!-- JavaScript para navegação entre especialidades -->
+<script>
+  function mostrarEspecialidade(especialidade) {
+    console.log('Mostrando especialidade:', especialidade);
+
+    // Remover active de todos os botões
+    document.querySelectorAll('.especialidade-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Adicionar active no botão clicado
+    document.querySelector(`[data-especialidade="${especialidade}"]`).classList.add('active');
+
+    // Esconder todas as seções de profissionais
+    document.querySelectorAll('.especialidade-profissionais').forEach(section => {
+      section.classList.remove('active');
+      section.style.display = 'none';
+    });
+
+    // Mostrar apenas a seção da especialidade selecionada
+    const especialidadeSection = document.getElementById(`especialidade-${especialidade}-profissionais`);
+    if (especialidadeSection) {
+      especialidadeSection.classList.add('active');
+      especialidadeSection.style.display = 'block';
+    }
+
+    console.log('Especialidade', especialidade, 'ativada');
+  }
+
+  // Inicializar quando a página carregar
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Inicializando navegação de especialidades');
+
+    // Esconder todas as seções exceto "todos"
+    document.querySelectorAll('.especialidade-profissionais').forEach((section, index) => {
+      const especialidade = section.getAttribute('data-especialidade');
+      if (especialidade === 'todos') {
+        section.style.display = 'block';
+        section.classList.add('active');
+      } else {
+        section.style.display = 'none';
+        section.classList.remove('active');
+      }
+    });
+
+    console.log('Navegação de especialidades inicializada');
+  });
+</script>
