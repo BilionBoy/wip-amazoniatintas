@@ -21,6 +21,9 @@ pt-BR:
       l_produto:
         one: "Produto"
         other: "Produtos"
+      l_profissional:
+        one: "Profissional"
+        other: "Profissionais"
     attributes:
       user:
         nome: "Nome"
@@ -53,6 +56,12 @@ pt-BR:
         created_at: "Criado em"
         updated_at: "Atualizado em"
         l_categoria: "Categoria"
+      l_profissional:
+        nome: "Nome"
+        especialidade: "Especialidade"
+        descricao: "Descrição"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
   date:
     abbr_day_names:
       - dom
